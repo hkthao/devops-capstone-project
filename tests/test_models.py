@@ -1,10 +1,10 @@
 """
 Test cases for Account Model
-
 """
 import logging
 import unittest
 import os
+from datetime import date
 from service import app
 from service.models import Account, DataValidationError, db
 from tests.factories import AccountFactory
@@ -49,7 +49,6 @@ class TestAccount(unittest.TestCase):
     def test_create_an_account(self):
         """It should Create an Account and assert that it exists"""
         fake_account = AccountFactory()
-        # pylint: disable=unexpected-keyword-arg
         account = Account(
             name=fake_account.name,
             email=fake_account.email,
@@ -58,12 +57,17 @@ class TestAccount(unittest.TestCase):
             date_joined=fake_account.date_joined,
         )
         self.assertIsNotNone(account)
-        self.assertEqual(account.id, None)
+        self.assertEqual(account.id, None)  # covers line 32
         self.assertEqual(account.name, fake_account.name)
         self.assertEqual(account.email, fake_account.email)
         self.assertEqual(account.address, fake_account.address)
         self.assertEqual(account.phone_number, fake_account.phone_number)
         self.assertEqual(account.date_joined, fake_account.date_joined)
+
+    def test_repr_account(self):
+        """It should cover __repr__ for Account"""
+        account = AccountFactory()
+        self.assertIn(f"<Account {account.name} id=[{account.id}]>", repr(account))  # line 98
 
     def test_add_a_account(self):
         """It should Create an account and add it to the database"""
@@ -71,7 +75,6 @@ class TestAccount(unittest.TestCase):
         self.assertEqual(accounts, [])
         account = AccountFactory()
         account.create()
-        # Assert that it was assigned an id and shows up in the database
         self.assertIsNotNone(account.id)
         accounts = Account.all()
         self.assertEqual(len(accounts), 1)
@@ -80,8 +83,6 @@ class TestAccount(unittest.TestCase):
         """It should Read an account"""
         account = AccountFactory()
         account.create()
-
-        # Read it back
         found_account = Account.find(account.id)
         self.assertEqual(found_account.id, account.id)
         self.assertEqual(found_account.name, account.name)
@@ -94,16 +95,11 @@ class TestAccount(unittest.TestCase):
         """It should Update an account"""
         account = AccountFactory(email="advent@change.me")
         account.create()
-        # Assert that it was assigned an id and shows up in the database
         self.assertIsNotNone(account.id)
         self.assertEqual(account.email, "advent@change.me")
-
-        # Fetch it back
         account = Account.find(account.id)
         account.email = "XYZZY@plugh.com"
         account.update()
-
-        # Fetch it back again
         account = Account.find(account.id)
         self.assertEqual(account.email, "XYZZY@plugh.com")
 
@@ -113,11 +109,9 @@ class TestAccount(unittest.TestCase):
         self.assertEqual(accounts, [])
         account = AccountFactory()
         account.create()
-        # Assert that it was assigned an id and shows up in the database
         self.assertIsNotNone(account.id)
         accounts = Account.all()
         self.assertEqual(len(accounts), 1)
-        account = accounts[0]
         account.delete()
         accounts = Account.all()
         self.assertEqual(len(accounts), 0)
@@ -128,7 +122,6 @@ class TestAccount(unittest.TestCase):
         self.assertEqual(accounts, [])
         for account in AccountFactory.create_batch(5):
             account.create()
-        # Assert that there are not 5 accounts in the database
         accounts = Account.all()
         self.assertEqual(len(accounts), 5)
 
@@ -136,8 +129,6 @@ class TestAccount(unittest.TestCase):
         """It should Find an Account by name"""
         account = AccountFactory()
         account.create()
-
-        # Fetch it back by name
         same_account = Account.find_by_name(account.name)[0]
         self.assertEqual(same_account.id, account.id)
         self.assertEqual(same_account.name, account.name)
@@ -166,6 +157,15 @@ class TestAccount(unittest.TestCase):
         self.assertEqual(new_account.phone_number, account.phone_number)
         self.assertEqual(new_account.date_joined, account.date_joined)
 
+    def test_deserialize_without_date_joined(self):
+        """It should set date_joined to today if not provided"""
+        account = AccountFactory()
+        data = account.serialize()
+        data.pop("date_joined", None)
+        new_account = Account()
+        new_account.deserialize(data)
+        self.assertEqual(new_account.date_joined, date.today())  # covers line 127
+
     def test_deserialize_with_key_error(self):
         """It should not Deserialize an account with a KeyError"""
         account = Account()
@@ -175,3 +175,4 @@ class TestAccount(unittest.TestCase):
         """It should not Deserialize an account with a TypeError"""
         account = Account()
         self.assertRaises(DataValidationError, account.deserialize, [])
+
