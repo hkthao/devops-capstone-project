@@ -3,7 +3,7 @@ Test cases for error_handlers module
 """
 
 import unittest
-from flask import Flask, jsonify
+from flask import Flask
 from service.common import error_handlers as eh
 from service.common import status
 from service.models import DataValidationError

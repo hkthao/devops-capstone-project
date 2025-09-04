@@ -1,0 +1,1600 @@
+[init : remove] Removing all files from /workspace/source ...
+
+[clone : clone] + '[' false '=' true ]
+[clone : clone] + '[' false '=' true ]
+[clone : clone] + '[' false '=' true ]
+[clone : clone] + CHECKOUT_DIR=/workspace/output/
+[clone : clone] + '[' true '=' true ]
+[clone : clone] + cleandir
+[clone : clone] + '[' -d /workspace/output/ ]
+[clone : clone] + rm -rf '/workspace/output//*'
+[clone : clone] + rm -rf '/workspace/output//.[!.]*'
+[clone : clone] + rm -rf '/workspace/output//..?*'
+[clone : clone] + test -z 
+[clone : clone] + test -z 
+[clone : clone] + test -z 
+[clone : clone] + git config --global --add safe.directory /workspace/output
+[clone : clone] + /ko-app/git-init '-url=https://github.com/hkthao/devops-capstone-project.git' '-revision=main' '-refspec=' '-path=/workspace/output/' '-sslVerify=true' '-submodules=true' '-depth=1' '-sparseCheckoutDirectories='
+[clone : clone] {"level":"info","ts":1756962131.515185,"caller":"git/git.go:176","msg":"Successfully cloned https://github.com/hkthao/devops-capstone-project.git @ 773872a8c2d24b14c734cbbd8eb26b13454d9bef (grafted, HEAD, origin/main) in path /workspace/output/"}
+[clone : clone] {"level":"info","ts":1756962132.1956904,"caller":"git/git.go:215","msg":"Successfully initialized and updated submodules in path /workspace/output/"}
+[clone : clone] + cd /workspace/output/
+[clone : clone] + git rev-parse HEAD
+[clone : clone] + RESULT_SHA=773872a8c2d24b14c734cbbd8eb26b13454d9bef
+[clone : clone] + EXIT_CODE=0
+[clone : clone] + '[' 0 '!=' 0 ]
+[clone : clone] + git log -1 '--pretty=%ct'
+[clone : clone] + RESULT_COMMITTER_DATE=1756961974
+[clone : clone] + printf '%s' 1756961974
+[clone : clone] + printf '%s' 773872a8c2d24b14c734cbbd8eb26b13454d9bef
+[clone : clone] + printf '%s' https://github.com/hkthao/devops-capstone-project.git
+
+[lint : flake8] Collecting Werkzeug==2.1.2
+[lint : flake8]   Downloading Werkzeug-2.1.2-py3-none-any.whl (224 kB)
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 224.9/224.9 kB 4.2 MB/s eta 0:00:00
+[lint : flake8] Collecting SQLAlchemy==1.4.46
+[lint : flake8]   Downloading SQLAlchemy-1.4.46-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.6 MB)
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.6/1.6 MB 75.6 MB/s eta 0:00:00
+[lint : flake8] Collecting Flask==2.1.2
+[lint : flake8]   Downloading Flask-2.1.2-py3-none-any.whl (95 kB)
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 95.2/95.2 kB 53.2 MB/s eta 0:00:00
+[lint : flake8] Collecting Flask-SQLAlchemy==2.5.1
+[lint : flake8]   Downloading Flask_SQLAlchemy-2.5.1-py2.py3-none-any.whl (17 kB)
+[lint : flake8] Collecting psycopg2-binary==2.9.3
+[lint : flake8]   Downloading psycopg2_binary-2.9.3-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.0 MB)
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.0/3.0 MB 35.3 MB/s eta 0:00:00
+[lint : flake8] Collecting python-dotenv==0.20.0
+[lint : flake8]   Downloading python_dotenv-0.20.0-py3-none-any.whl (17 kB)
+[lint : flake8] Collecting gunicorn==20.1.0
+[lint : flake8]   Downloading gunicorn-20.1.0-py3-none-any.whl (79 kB)
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 79.5/79.5 kB 40.4 MB/s eta 0:00:00
+[lint : flake8] Collecting honcho==1.1.0
+[lint : flake8]   Downloading honcho-1.1.0-py2.py3-none-any.whl (21 kB)
+[lint : flake8] Collecting pylint==2.14.0
+[lint : flake8]   Downloading pylint-2.14.0-py3-none-any.whl (485 kB)
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 485.0/485.0 kB 52.9 MB/s eta 0:00:00
+[lint : flake8] Collecting flake8==4.0.1
+[lint : flake8]   Downloading flake8-4.0.1-py2.py3-none-any.whl (64 kB)
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.1/64.1 kB 22.1 MB/s eta 0:00:00
+[lint : flake8] Collecting black==22.3.0
+[lint : flake8]   Downloading black-22.3.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.5 MB)
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.5/1.5 MB 107.9 MB/s eta 0:00:00
+[lint : flake8] Collecting nose==1.3.7
+[lint : flake8]   Downloading nose-1.3.7-py3-none-any.whl (154 kB)
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 154.7/154.7 kB 3.2 MB/s eta 0:00:00
+[lint : flake8] Collecting pinocchio==0.4.3
+[lint : flake8]   Downloading pinocchio-0.4.3-py3-none-any.whl (12 kB)
+[lint : flake8] Collecting factory-boy==2.12.0
+[lint : flake8]   Downloading factory_boy-2.12.0-py2.py3-none-any.whl (36 kB)
+[lint : flake8] Collecting coverage==6.3.2
+[lint : flake8]   Downloading coverage-6.3.2-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (210 kB)
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 210.7/210.7 kB 79.4 MB/s eta 0:00:00
+[lint : flake8] Collecting httpie==3.2.1
+[lint : flake8]   Downloading httpie-3.2.1-py3-none-any.whl (124 kB)
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 125.0/125.0 kB 60.8 MB/s eta 0:00:00
+[lint : flake8] Collecting Flask-Talisman
+[lint : flake8]   Downloading flask_talisman-1.1.0-py2.py3-none-any.whl (18 kB)
+[lint : flake8] Collecting Flask-Cors
+[lint : flake8]   Downloading flask_cors-6.0.1-py3-none-any.whl (13 kB)
+[lint : flake8] Collecting greenlet!=0.4.17
+[lint : flake8]   Downloading greenlet-3.2.4-cp39-cp39-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (582 kB)
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 582.8/582.8 kB 104.2 MB/s eta 0:00:00
+[lint : flake8] Collecting Jinja2>=3.0
+[lint : flake8]   Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.9/134.9 kB 66.1 MB/s eta 0:00:00
+[lint : flake8] Collecting importlib-metadata>=3.6.0
+[lint : flake8]   Downloading importlib_metadata-8.7.0-py3-none-any.whl (27 kB)
+[lint : flake8] Collecting click>=8.0
+[lint : flake8]   Downloading click-8.1.8-py3-none-any.whl (98 kB)
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 98.2/98.2 kB 51.7 MB/s eta 0:00:00
+[lint : flake8] Collecting itsdangerous>=2.0
+[lint : flake8]   Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+[lint : flake8] Requirement already satisfied: setuptools>=3.0 in /usr/local/lib/python3.9/site-packages (from gunicorn==20.1.0->-r requirements.txt (line 12)) (58.1.0)
+[lint : flake8] Collecting platformdirs>=2.2.0
+[lint : flake8]   Downloading platformdirs-4.4.0-py3-none-any.whl (18 kB)
+[lint : flake8] Collecting typing-extensions>=3.10.0
+[lint : flake8]   Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.6/44.6 kB 25.7 MB/s eta 0:00:00
+[lint : flake8] Collecting mccabe<0.8,>=0.6
+[lint : flake8]   Downloading mccabe-0.7.0-py2.py3-none-any.whl (7.3 kB)
+[lint : flake8] Collecting dill>=0.2
+[lint : flake8]   Downloading dill-0.4.0-py3-none-any.whl (119 kB)
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 119.7/119.7 kB 59.8 MB/s eta 0:00:00
+[lint : flake8] Collecting tomlkit>=0.10.1
+[lint : flake8]   Downloading tomlkit-0.13.3-py3-none-any.whl (38 kB)
+[lint : flake8] Collecting astroid<=2.12.0-dev0,>=2.11.5
+[lint : flake8]   Downloading astroid-2.11.7-py3-none-any.whl (251 kB)
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 251.2/251.2 kB 79.3 MB/s eta 0:00:00
+[lint : flake8] Collecting tomli>=1.1.0
+[lint : flake8]   Downloading tomli-2.2.1-py3-none-any.whl (14 kB)
+[lint : flake8] Collecting isort<6,>=4.2.5
+[lint : flake8]   Downloading isort-5.13.2-py3-none-any.whl (92 kB)
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 92.3/92.3 kB 43.0 MB/s eta 0:00:00
+[lint : flake8] Collecting mccabe<0.8,>=0.6
+[lint : flake8]   Downloading mccabe-0.6.1-py2.py3-none-any.whl (8.6 kB)
+[lint : flake8] Collecting pyflakes<2.5.0,>=2.4.0
+[lint : flake8]   Downloading pyflakes-2.4.0-py2.py3-none-any.whl (69 kB)
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 69.7/69.7 kB 29.1 MB/s eta 0:00:00
+[lint : flake8] Collecting pycodestyle<2.9.0,>=2.8.0
+[lint : flake8]   Downloading pycodestyle-2.8.0-py2.py3-none-any.whl (42 kB)
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 42.1/42.1 kB 19.8 MB/s eta 0:00:00
+[lint : flake8] Collecting mypy-extensions>=0.4.3
+[lint : flake8]   Downloading mypy_extensions-1.1.0-py3-none-any.whl (5.0 kB)
+[lint : flake8] Collecting pathspec>=0.9.0
+[lint : flake8]   Downloading pathspec-0.12.1-py3-none-any.whl (31 kB)
+[lint : flake8] Collecting colorama
+[lint : flake8]   Downloading colorama-0.4.6-py2.py3-none-any.whl (25 kB)
+[lint : flake8] Collecting Faker>=0.7.0
+[lint : flake8]   Downloading faker-37.6.0-py3-none-any.whl (1.9 MB)
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.9/1.9 MB 109.8 MB/s eta 0:00:00
+[lint : flake8] Collecting defusedxml>=0.6.0
+[lint : flake8]   Downloading defusedxml-0.7.1-py2.py3-none-any.whl (25 kB)
+[lint : flake8] Collecting charset-normalizer>=2.0.0
+[lint : flake8]   Downloading charset_normalizer-3.4.3-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (152 kB)
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 152.5/152.5 kB 65.4 MB/s eta 0:00:00
+[lint : flake8] Collecting requests-toolbelt>=0.9.1
+[lint : flake8]   Downloading requests_toolbelt-1.0.0-py2.py3-none-any.whl (54 kB)
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 54.5/54.5 kB 22.2 MB/s eta 0:00:00
+[lint : flake8] Collecting multidict>=4.7.0
+[lint : flake8]   Downloading multidict-6.6.4-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (239 kB)
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 239.2/239.2 kB 81.3 MB/s eta 0:00:00
+[lint : flake8] Collecting Pygments>=2.5.2
+[lint : flake8]   Downloading pygments-2.19.2-py3-none-any.whl (1.2 MB)
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 111.6 MB/s eta 0:00:00
+[lint : flake8] Collecting rich>=9.10.0
+[lint : flake8]   Downloading rich-14.1.0-py3-none-any.whl (243 kB)
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 243.4/243.4 kB 23.4 MB/s eta 0:00:00
+[lint : flake8] Collecting requests[socks]>=2.22.0
+[lint : flake8]   Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 23.8 MB/s eta 0:00:00
+[lint : flake8] Requirement already satisfied: pip in /usr/local/lib/python3.9/site-packages (from httpie==3.2.1->-r requirements.txt (line 29)) (23.0.1)
+[lint : flake8] Collecting lazy-object-proxy>=1.4.0
+[lint : flake8]   Downloading lazy_object_proxy-1.12.0-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (66 kB)
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.3/66.3 kB 35.8 MB/s eta 0:00:00
+[lint : flake8] Collecting wrapt<2,>=1.11
+[lint : flake8]   Downloading wrapt-1.17.3-cp39-cp39-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (81 kB)
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 81.7/81.7 kB 44.3 MB/s eta 0:00:00
+[lint : flake8] Collecting tzdata
+[lint : flake8]   Downloading tzdata-2025.2-py2.py3-none-any.whl (347 kB)
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 347.8/347.8 kB 6.7 MB/s eta 0:00:00
+[lint : flake8] Collecting zipp>=3.20
+[lint : flake8]   Downloading zipp-3.23.0-py3-none-any.whl (10 kB)
+[lint : flake8] Collecting MarkupSafe>=2.0
+[lint : flake8]   Downloading MarkupSafe-3.0.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (20 kB)
+[lint : flake8] Collecting urllib3<3,>=1.21.1
+[lint : flake8]   Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 52.2 MB/s eta 0:00:00
+[lint : flake8] Collecting certifi>=2017.4.17
+[lint : flake8]   Downloading certifi-2025.8.3-py3-none-any.whl (161 kB)
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 161.2/161.2 kB 67.2 MB/s eta 0:00:00
+[lint : flake8] Collecting idna<4,>=2.5
+[lint : flake8]   Downloading idna-3.10-py3-none-any.whl (70 kB)
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 70.4/70.4 kB 40.9 MB/s eta 0:00:00
+[lint : flake8] Collecting PySocks!=1.5.7,>=1.5.6
+[lint : flake8]   Downloading PySocks-1.7.1-py3-none-any.whl (16 kB)
+[lint : flake8] Collecting markdown-it-py>=2.2.0
+[lint : flake8]   Downloading markdown_it_py-3.0.0-py3-none-any.whl (87 kB)
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 87.5/87.5 kB 44.9 MB/s eta 0:00:00
+[lint : flake8] Collecting mdurl~=0.1
+[lint : flake8]   Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+[lint : flake8] Installing collected packages: nose, mccabe, honcho, Flask-Talisman, zipp, wrapt, Werkzeug, urllib3, tzdata, typing-extensions, tomlkit, tomli, python-dotenv, PySocks, Pygments, pyflakes, pycodestyle, psycopg2-binary, platformdirs, pathspec, mypy-extensions, mdurl, MarkupSafe, lazy-object-proxy, itsdangerous, isort, idna, gunicorn, greenlet, dill, defusedxml, coverage, colorama, click, charset-normalizer, certifi, SQLAlchemy, requests, pinocchio, multidict, markdown-it-py, Jinja2, importlib-metadata, flake8, Faker, black, astroid, rich, requests-toolbelt, pylint, Flask, factory-boy, httpie, Flask-SQLAlchemy, Flask-Cors
+[lint : flake8] Successfully installed Faker-37.6.0 Flask-2.1.2 Flask-Cors-6.0.1 Flask-SQLAlchemy-2.5.1 Flask-Talisman-1.1.0 Jinja2-3.1.6 MarkupSafe-3.0.2 PySocks-1.7.1 Pygments-2.19.2 SQLAlchemy-1.4.46 Werkzeug-2.1.2 astroid-2.11.7 black-22.3.0 certifi-2025.8.3 charset-normalizer-3.4.3 click-8.1.8 colorama-0.4.6 coverage-6.3.2 defusedxml-0.7.1 dill-0.4.0 factory-boy-2.12.0 flake8-4.0.1 greenlet-3.2.4 gunicorn-20.1.0 honcho-1.1.0 httpie-3.2.1 idna-3.10 importlib-metadata-8.7.0 isort-5.13.2 itsdangerous-2.2.0 lazy-object-proxy-1.12.0 markdown-it-py-3.0.0 mccabe-0.6.1 mdurl-0.1.2 multidict-6.6.4 mypy-extensions-1.1.0 nose-1.3.7 pathspec-0.12.1 pinocchio-0.4.3 platformdirs-4.4.0 psycopg2-binary-2.9.3 pycodestyle-2.8.0 pyflakes-2.4.0 pylint-2.14.0 python-dotenv-0.20.0 requests-2.32.5 requests-toolbelt-1.0.0 rich-14.1.0 tomli-2.2.1 tomlkit-0.13.3 typing-extensions-4.15.0 tzdata-2025.2 urllib3-2.5.0 wrapt-1.17.3 zipp-3.23.0
+[lint : flake8] WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+[lint : flake8] 
+[lint : flake8] [notice] A new release of pip is available: 23.0.1 -> 25.2
+[lint : flake8] [notice] To update, run: pip install --upgrade pip
+[lint : flake8] ./tests/test_error_handlers.py:6:1: F401 'flask.jsonify' imported but unused
+[lint : flake8] ./tests/test_models.py:178:1: W391 blank line at end of file
+[lint : flake8] ./tests/test_routes.py:135:9: F841 local variable 'accounts' is assigned to but never used
+[lint : flake8] ./tests/test_routes.py:158:76: W291 trailing whitespace
+[lint : flake8] ./tests/test_routes.py:204:83: W292 no newline at end of file
+[lint : flake8] 1     F401 'flask.jsonify' imported but unused
+[lint : flake8] 1     F841 local variable 'accounts' is assigned to but never used
+[lint : flake8] 1     W291 trailing whitespace
+[lint : flake8] 1     W292 no newline at end of file
+[lint : flake8] 1     W391 blank line at end of file
+[lint : flake8] 5
+
+[tests : nosetests] ***** Installing dependencies *****
+[tests : nosetests] Requirement already satisfied: pip in /usr/local/lib/python3.9/site-packages (23.0.1)
+[tests : nosetests] Collecting pip
+[tests : nosetests]   Downloading pip-25.2-py3-none-any.whl (1.8 MB)
+[tests : nosetests]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 23.0 MB/s eta 0:00:00
+[tests : nosetests] Requirement already satisfied: wheel in /usr/local/lib/python3.9/site-packages (0.44.0)
+[tests : nosetests] Collecting wheel
+[tests : nosetests]   Downloading wheel-0.45.1-py3-none-any.whl (72 kB)
+[tests : nosetests]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 72.5/72.5 kB 34.7 MB/s eta 0:00:00
+[tests : nosetests] Installing collected packages: wheel, pip
+[tests : nosetests]   Attempting uninstall: wheel
+[tests : nosetests]     Found existing installation: wheel 0.44.0
+[tests : nosetests]     Uninstalling wheel-0.44.0:
+[tests : nosetests]       Successfully uninstalled wheel-0.44.0
+[tests : nosetests]   Attempting uninstall: pip
+[tests : nosetests]     Found existing installation: pip 23.0.1
+[tests : nosetests]     Uninstalling pip-23.0.1:
+[tests : nosetests]       Successfully uninstalled pip-23.0.1
+[tests : nosetests] Successfully installed pip-25.2 wheel-0.45.1
+[tests : nosetests] WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+[tests : nosetests] WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+[tests : nosetests] ***** Running nosetests with: -v --with-spec --spec-color
+[tests : nosetests] nose.config: INFO: Ignoring files matching ['^\\.', '^_', '^setup\\.py$']
+[tests : nosetests] nose.plugins.manager: DEBUG: Configuring plugins
+[tests : nosetests] nose.plugins.cover: INFO: Coverage report will include only packages: ['service']
+[tests : nosetests] nose.plugins.cover: DEBUG: Coverage begin
+[tests : nosetests] nose.plugins.cover: DEBUG: Clearing previously collected coverage statistics
+[tests : nosetests] nose.plugins.manager: DEBUG: Plugins enabled: [<pinocchio.spec.Spec object at 0x7f2dd5657130>, <nose.plugins.capture.Capture object at 0x7f2dd53adf70>, <nose.plugins.logcapture.LogCapture object at 0x7f2dd53add60>, <nose.plugins.cover.Coverage object at 0x7f2dd53adb80>, <nose.plugins.deprecated.Deprecated object at 0x7f2dd53adaf0>, <nose.plugins.skip.Skip object at 0x7f2dd5570e80>]
+[tests : nosetests] nose.core: DEBUG: configured Config(addPaths=True, args=(), capture=False, configSection='nosetests', debug=None, debugLog=None, env={}, exclude=None, files=['setup.cfg'], firstPackageWins=False, getTestCaseNamesCompat=False, ignoreFiles=[re.compile('^\\.'), re.compile('^_'), re.compile('^setup\\.py$')], ignoreFilesDefaultStrings=['^\\.', '^_', '^setup\\.py$'], include=None, includeExe=False, logStream=<_io.TextIOWrapper name='<stderr>' mode='w' encoding='utf-8'>, loggingConfig=None, options=<Values at 0x7f2dd4d72d30: {'version': False, 'showPlugins': False, 'verbosity': 4, 'files': None, 'where': None, 'py3where': None, 'testMatch': '(?:^|[\\b_\\./-])[Tt]est', 'testNames': None, 'debug': None, 'debugLog': None, 'loggingConfig': None, 'ignoreFiles': [], 'exclude': [], 'include': [], 'stopOnError': False, 'addPaths': True, 'includeExe': False, 'traverseNamespace': False, 'firstPackageWins': False, 'byteCompile': True, 'decorator_file': None, 'enable_plugin_outputsave': None, 'omit_success_output': False, 'save_directory': '', 'enable_plugin_spec': True, 'spec_color': True, 'spec_doctests': None, 'spec_file': None, 'enable_plugin_stopwatch': None, 'faster_than': None, 'stopwatch_file': '.nose-stopwatch-times', 'enable_plugin_figleafsections': None, 'figleaf_file': None, 'attr': None, 'eval_attr': None, 'capture': True, 'logcapture': True, 'logcapture_format': '%(name)s: %(levelname)s: %(message)s', 'logcapture_datefmt': None, 'logcapture_filters': None, 'logcapture_clear': False, 'logcapture_level': 'NOTSET', 'enable_plugin_coverage': True, 'cover_packages': ['service'], 'cover_erase': True, 'cover_tests': None, 'cover_min_percentage': None, 'cover_inclusive': None, 'cover_html': None, 'cover_html_dir': 'cover', 'cover_branches': None, 'cover_xml': None, 'cover_xml_file': 'coverage.xml', 'debugBoth': False, 'debugFailures': False, 'debugErrors': False, 'noDeprecated': False, 'enable_plugin_doctest': None, 'doctest_tests': None, 'doctestExtension': None, 'doctest_result_var': None, 'doctestFixtures': None, 'doctestOptions': None, 'enable_plugin_isolation': None, 'detailedErrors': None, 'noSkip': False, 'enable_plugin_id': None, 'testIdFile': '.noseids', 'failed': False, 'multiprocess_workers': 0, 'multiprocess_timeout': 10, 'multiprocess_restartworker': False, 'enable_plugin_xunit': None, 'xunit_file': 'nosetests.xml', 'xunit_testsuite_name': 'nosetests', 'enable_plugin_allmodules': None, 'collect_only': None}>, parser=<optparse.OptionParser object at 0x7f2dd5e0dfa0>, parserClass=<class 'optparse.OptionParser'>, plugins=<nose.plugins.manager.DefaultPluginManager object at 0x7f2dd5e0d370>, py3where=(), runOnInit=True, srcDirs=('lib', 'src'), stopOnError=False, stream=<_io.TextIOWrapper name='<stderr>' mode='w' encoding='utf-8'>, testMatch=re.compile('(?:^|[\\b_\\./-])[Tt]est'), testMatchPat='(?:^|[\\b_\\./-])[Tt]est', testNames=[], traverseNamespace=False, verbosity=4, where=(), worker=False, workingDir='/workspace/source')
+[tests : nosetests] nose.importer: DEBUG: Add path /workspace/source
+[tests : nosetests] nose.importer: DEBUG: insert /workspace/source into sys.path
+[tests : nosetests] nose.core: DEBUG: test loader is <nose.loader.TestLoader object at 0x7f2dd4d72130>
+[tests : nosetests] nose.core: DEBUG: defaultTest .
+[tests : nosetests] nose.core: DEBUG: Test names are ['.']
+[tests : nosetests] nose.core: DEBUG: createTests called with None
+[tests : nosetests] nose.loader: DEBUG: load from . (None)
+[tests : nosetests] nose.selector: DEBUG: Test name . resolved to file ., module None, call None
+[tests : nosetests] nose.selector: DEBUG: Final resolution of test name .: file /workspace/source module None call None
+[tests : nosetests] nose.suite: DEBUG: Create suite for [<nose.suite.LazySuite tests=generator (139834817073600)>]
+[tests : nosetests] nose.suite: DEBUG: tests [<nose.suite.LazySuite tests=generator (139834817073600)>] context None
+[tests : nosetests] nose.suite: DEBUG: wrap [<nose.suite.LazySuite tests=generator (139834817073600)>]
+[tests : nosetests] nose.suite: DEBUG: wrapping <nose.suite.LazySuite tests=generator (139834817073600)>
+[tests : nosetests] nose.suite: DEBUG: Context suite for [<nose.suite.LazySuite tests=generator (139834817073600)>] (None) (139834817073360)
+[tests : nosetests] nose.core: DEBUG: runTests called
+[tests : nosetests] nose.suite: DEBUG: suite 139834817073360 (<nose.suite.ContextSuite context=None>) run called, tests: <generator object ContextSuite._get_wrapped_tests at 0x7f2dd4a69ba0>
+[tests : nosetests] nose.suite: DEBUG: suite 139834817073360 setUp called, tests: <generator object ContextSuite._get_wrapped_tests at 0x7f2dd4a69ba0>
+[tests : nosetests] nose.suite: DEBUG: tests in 139834817073360?
+[tests : nosetests] nose.suite: DEBUG: precache is [<nose.suite.LazySuite tests=generator (139834817073600)>]
+[tests : nosetests] nose.suite: DEBUG: precache is []
+[tests : nosetests] nose.loader: DEBUG: load from dir /workspace/source
+[tests : nosetests] nose.importer: DEBUG: Add path /workspace/source
+[tests : nosetests] nose.selector: DEBUG: wantFile /workspace/source/Dockerfile? False
+[tests : nosetests] nose.selector: DEBUG: wantFile /workspace/source/LICENSE? False
+[tests : nosetests] nose.selector: DEBUG: wantFile /workspace/source/Makefile? False
+[tests : nosetests] nose.selector: DEBUG: wantFile /workspace/source/Procfile? False
+[tests : nosetests] nose.selector: DEBUG: wantFile /workspace/source/README.md? False
+[tests : nosetests] nose.selector: DEBUG: wantDirectory /workspace/source/bin? False
+[tests : nosetests] nose.selector: DEBUG: wantDirectory /workspace/source/deploy? False
+[tests : nosetests] nose.selector: DEBUG: wantFile /workspace/source/postgresql-ephemeral-template.json? False
+[tests : nosetests] nose.selector: DEBUG: wantFile /workspace/source/requirements.txt? False
+[tests : nosetests] nose.selector: DEBUG: wantDirectory /workspace/source/service? True
+[tests : nosetests] nose.loader: DEBUG: load from /workspace/source/service (None)
+[tests : nosetests] nose.selector: DEBUG: Test name /workspace/source/service resolved to file /workspace/source/service, module None, call None
+[tests : nosetests] nose.selector: DEBUG: Final resolution of test name /workspace/source/service: file /workspace/source/service module service call None
+[tests : nosetests] nose.importer: DEBUG: Import service from /workspace/source
+[tests : nosetests] nose.importer: DEBUG: Add path /workspace/source
+[tests : nosetests] nose.importer: DEBUG: find module part service (service) in ['/workspace/source']
+[tests : nosetests] nose.loader: DEBUG: Load from module <module 'service' from '/workspace/source/service/__init__.py'>
+[tests : nosetests] nose.selector: DEBUG: wantModule <module 'service' from '/workspace/source/service/__init__.py'>? False
+[tests : nosetests] nose.loader: DEBUG: Load tests from module path /workspace/source/service?
+[tests : nosetests] nose.loader: DEBUG: path: /workspace/source/service os.path.realpath(/workspace/source/service): /workspace/source/service
+[tests : nosetests] nose.loader: DEBUG: load from dir /workspace/source/service
+[tests : nosetests] nose.importer: DEBUG: Add path /workspace/source/service
+[tests : nosetests] nose.importer: DEBUG: Add path /workspace/source
+[tests : nosetests] nose.selector: DEBUG: __init__.py matches ignoreFiles pattern; skipped
+[tests : nosetests] nose.selector: DEBUG: wantDirectory /workspace/source/service/common? True
+[tests : nosetests] nose.loader: DEBUG: load from /workspace/source/service/common (None)
+[tests : nosetests] nose.selector: DEBUG: Test name /workspace/source/service/common resolved to file /workspace/source/service/common, module None, call None
+[tests : nosetests] nose.selector: DEBUG: Final resolution of test name /workspace/source/service/common: file /workspace/source/service/common module service.common call None
+[tests : nosetests] nose.importer: DEBUG: Import service.common from /workspace/source
+[tests : nosetests] nose.importer: DEBUG: Add path /workspace/source
+[tests : nosetests] nose.importer: DEBUG: find module part service (service) in ['/workspace/source']
+[tests : nosetests] nose.importer: DEBUG: sys.modules has service as <module 'service' from '/workspace/source/service/__init__.py'>
+[tests : nosetests] nose.importer: DEBUG: module already loaded? mod: /workspace/source/service new: /workspace/source/service
+[tests : nosetests] nose.importer: DEBUG: find module part common (service.common) in ['/workspace/source/service']
+[tests : nosetests] nose.importer: DEBUG: sys.modules has service.common as <module 'service.common' from '/workspace/source/service/common/__init__.py'>
+[tests : nosetests] nose.importer: DEBUG: module already loaded? mod: /workspace/source/service/common new: /workspace/source/service/common
+[tests : nosetests] nose.loader: DEBUG: Load from module <module 'service.common' from '/workspace/source/service/common/__init__.py'>
+[tests : nosetests] nose.selector: DEBUG: wantModule <module 'service.common' from '/workspace/source/service/common/__init__.py'>? False
+[tests : nosetests] nose.loader: DEBUG: Load tests from module path /workspace/source/service/common?
+[tests : nosetests] nose.loader: DEBUG: path: /workspace/source/service/common os.path.realpath(/workspace/source/service/common): /workspace/source/service/common
+[tests : nosetests] nose.loader: DEBUG: load from dir /workspace/source/service/common
+[tests : nosetests] nose.importer: DEBUG: Add path /workspace/source/service/common
+[tests : nosetests] nose.importer: DEBUG: Add path /workspace/source/service
+[tests : nosetests] nose.importer: DEBUG: Add path /workspace/source
+[tests : nosetests] nose.selector: DEBUG: __init__.py matches ignoreFiles pattern; skipped
+[tests : nosetests] nose.selector: DEBUG: wantFile /workspace/source/service/common/cli_commands.py? None
+[tests : nosetests] nose.selector: DEBUG: wantFile /workspace/source/service/common/error_handlers.py? None
+[tests : nosetests] nose.selector: DEBUG: wantFile /workspace/source/service/common/log_handlers.py? None
+[tests : nosetests] nose.selector: DEBUG: wantFile /workspace/source/service/common/status.py? None
+[tests : nosetests] nose.suite: DEBUG: Create suite for <nose.suite.ContextList object at 0x7f2dd2dd8f70>
+[tests : nosetests] nose.suite: DEBUG: tests <nose.suite.ContextList object at 0x7f2dd2dd8f70> context <module 'service.common' from '/workspace/source/service/common/__init__.py'>
+[tests : nosetests] nose.suite: DEBUG: Context suite for <nose.suite.ContextList object at 0x7f2dd2dd8f70> (<module 'service.common' from '/workspace/source/service/common/__init__.py'>) (139834787991360)
+[tests : nosetests] nose.suite: DEBUG: suite <nose.suite.ContextSuite context=service.common> has context service.common
+[tests : nosetests] nose.suite: DEBUG: get ancestry <module 'service.common' from '/workspace/source/service/common/__init__.py'>
+[tests : nosetests] nose.suite: DEBUG:  <module 'service.common' from '/workspace/source/service/common/__init__.py'> ancestors ['service']
+[tests : nosetests] nose: DEBUG: __import__ service
+[tests : nosetests] nose: DEBUG: resolve: [], service, <module 'service' from '/workspace/source/service/__init__.py'>, <module 'service' from '/workspace/source/service/__init__.py'>
+[tests : nosetests] nose.suite: DEBUG: suite <nose.suite.ContextSuite context=service.common> has ancestor service
+[tests : nosetests] nose.selector: DEBUG: wantFile /workspace/source/service/config.py? None
+[tests : nosetests] nose.selector: DEBUG: wantFile /workspace/source/service/models.py? None
+[tests : nosetests] nose.selector: DEBUG: wantFile /workspace/source/service/routes.py? None
+[tests : nosetests] nose.selector: DEBUG: wantFile /workspace/source/service/test.db? False
+[tests : nosetests] nose.suite: DEBUG: Create suite for <nose.suite.ContextList object at 0x7f2dd2e190d0>
+[tests : nosetests] nose.suite: DEBUG: tests <nose.suite.ContextList object at 0x7f2dd2e190d0> context <module 'service' from '/workspace/source/service/__init__.py'>
+[tests : nosetests] nose.suite: DEBUG: Context suite for <nose.suite.ContextList object at 0x7f2dd2e190d0> (<module 'service' from '/workspace/source/service/__init__.py'>) (139834788253760)
+[tests : nosetests] nose.suite: DEBUG: suite <nose.suite.ContextSuite context=service> has context service
+[tests : nosetests] nose.suite: DEBUG: get ancestry <module 'service' from '/workspace/source/service/__init__.py'>
+[tests : nosetests] nose.suite: DEBUG: suite 139834788253760 (<nose.suite.ContextSuite context=service>) run called, tests: <generator object ContextSuite._get_wrapped_tests at 0x7f2dd2dd1a50>
+[tests : nosetests] nose.suite: DEBUG: suite 139834788253760 setUp called, tests: <generator object ContextSuite._get_wrapped_tests at 0x7f2dd2dd1a50>
+[tests : nosetests] nose.suite: DEBUG: tests in 139834788253760?
+[tests : nosetests] nose.suite: DEBUG: ancestor <module 'service' from '/workspace/source/service/__init__.py'> may need setup
+[tests : nosetests] nose.suite: DEBUG: ancestor <module 'service' from '/workspace/source/service/__init__.py'> does need setup
+[tests : nosetests] nose.suite: DEBUG: <nose.suite.ContextSuite context=service> setup context <module 'service' from '/workspace/source/service/__init__.py'>
+[tests : nosetests] nose.suite: DEBUG: completed suite setup
+[tests : nosetests] nose.suite: DEBUG: precache is [<nose.suite.ContextSuite context=service.common>]
+[tests : nosetests] nose.suite: DEBUG: suite 139834787991360 (<nose.suite.ContextSuite context=service.common>) run called, tests: <generator object ContextSuite._get_wrapped_tests at 0x7f2dd2dd1c10>
+[tests : nosetests] nose.suite: DEBUG: suite 139834787991360 setUp called, tests: <generator object ContextSuite._get_wrapped_tests at 0x7f2dd2dd1c10>
+[tests : nosetests] nose.suite: DEBUG: tests in 139834787991360?
+[tests : nosetests] nose.suite: DEBUG: suite 139834787991360 has no tests
+[tests : nosetests] nose.suite: DEBUG: precache is []
+[tests : nosetests] nose.suite: DEBUG: context teardown
+[tests : nosetests] nose.suite: DEBUG: No reason to teardown (was_setup? False was_torndown? False)
+[tests : nosetests] nose.suite: DEBUG: context teardown
+[tests : nosetests] nose.suite: DEBUG: ancestor <module 'service' from '/workspace/source/service/__init__.py'> may need teardown
+[tests : nosetests] nose.suite: DEBUG: <nose.suite.ContextSuite context=service> setup ancestor <module 'service' from '/workspace/source/service/__init__.py'>
+[tests : nosetests] nose.suite: DEBUG: <nose.suite.ContextSuite context=service> teardown context <module 'service' from '/workspace/source/service/__init__.py'>
+[tests : nosetests] nose.suite: DEBUG: ancestor <module 'service' from '/workspace/source/service/__init__.py'> may need teardown
+[tests : nosetests] nose.suite: DEBUG: ancestor <module 'service' from '/workspace/source/service/__init__.py'> already torn down
+[tests : nosetests] nose.selector: DEBUG: wantFile /workspace/source/setup.cfg? False
+[tests : nosetests] nose.selector: DEBUG: wantDirectory /workspace/source/tekton? False
+[tests : nosetests] nose.selector: DEBUG: wantDirectory /workspace/source/tests? True
+[tests : nosetests] nose.loader: DEBUG: load from /workspace/source/tests (None)
+[tests : nosetests] nose.selector: DEBUG: Test name /workspace/source/tests resolved to file /workspace/source/tests, module None, call None
+[tests : nosetests] nose.selector: DEBUG: Final resolution of test name /workspace/source/tests: file /workspace/source/tests module tests call None
+[tests : nosetests] nose.importer: DEBUG: Import tests from /workspace/source
+[tests : nosetests] nose.importer: DEBUG: Add path /workspace/source
+[tests : nosetests] nose.importer: DEBUG: find module part tests (tests) in ['/workspace/source']
+[tests : nosetests] nose.loader: DEBUG: Load from module <module 'tests' from '/workspace/source/tests/__init__.py'>
+[tests : nosetests] nose.selector: DEBUG: wantModule <module 'tests' from '/workspace/source/tests/__init__.py'>? True
+[tests : nosetests] nose.loader: DEBUG: Load tests from module path /workspace/source/tests?
+[tests : nosetests] nose.loader: DEBUG: path: /workspace/source/tests os.path.realpath(/workspace/source/tests): /workspace/source/tests
+[tests : nosetests] nose.loader: DEBUG: load from dir /workspace/source/tests
+[tests : nosetests] nose.importer: DEBUG: Add path /workspace/source/tests
+[tests : nosetests] nose.importer: DEBUG: Add path /workspace/source
+[tests : nosetests] nose.selector: DEBUG: __init__.py matches ignoreFiles pattern; skipped
+[tests : nosetests] nose.selector: DEBUG: wantFile /workspace/source/tests/factories.py? None
+[tests : nosetests] nose.selector: DEBUG: wantFile /workspace/source/tests/test_cli_commands.py? True
+[tests : nosetests] nose.loader: DEBUG: load from /workspace/source/tests/test_cli_commands.py (None)
+[tests : nosetests] nose.selector: DEBUG: Test name /workspace/source/tests/test_cli_commands.py resolved to file /workspace/source/tests/test_cli_commands.py, module None, call None
+[tests : nosetests] nose.selector: DEBUG: Final resolution of test name /workspace/source/tests/test_cli_commands.py: file /workspace/source/tests/test_cli_commands.py module tests.test_cli_commands call None
+[tests : nosetests] nose.importer: DEBUG: Import tests.test_cli_commands from /workspace/source
+[tests : nosetests] nose.importer: DEBUG: Add path /workspace/source
+[tests : nosetests] nose.importer: DEBUG: find module part tests (tests) in ['/workspace/source']
+[tests : nosetests] nose.importer: DEBUG: sys.modules has tests as <module 'tests' from '/workspace/source/tests/__init__.py'>
+[tests : nosetests] nose.importer: DEBUG: module already loaded? mod: /workspace/source/tests new: /workspace/source/tests
+[tests : nosetests] nose.importer: DEBUG: find module part test_cli_commands (tests.test_cli_commands) in ['/workspace/source/tests']
+[tests : nosetests] nose.loader: DEBUG: Load from module <module 'tests.test_cli_commands' from '/workspace/source/tests/test_cli_commands.py'>
+[tests : nosetests] nose.selector: DEBUG: wantModule <module 'tests.test_cli_commands' from '/workspace/source/tests/test_cli_commands.py'>? True
+[tests : nosetests] nose.selector: DEBUG: wantClass <class 'click.testing.CliRunner'>? None
+[tests : nosetests] nose.selector: DEBUG: wantClass <class 'unittest.mock.MagicMock'>? None
+[tests : nosetests] nose.selector: DEBUG: wantClass <class 'unittest.case.TestCase'>? True
+[tests : nosetests] nose.selector: DEBUG: wantClass <class 'tests.test_cli_commands.TestFlaskCLI'>? True
+[tests : nosetests] nose.selector: DEBUG: wantFunction <function patch at 0x7f2dd2d1a820>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <bound method TestCase.addClassCleanup of <class 'tests.test_cli_commands.transplant_class.<locals>.C'>>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.addCleanup>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.addTypeEqualityFunc>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.assertAlmostEqual>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.assertCountEqual>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.assertDictContainsSubset>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.assertDictEqual>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.assertEqual>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.assertFalse>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.assertGreater>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.assertGreaterEqual>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.assertIn>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.assertIs>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.assertIsInstance>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.assertIsNone>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.assertIsNot>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.assertIsNotNone>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.assertLess>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.assertLessEqual>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.assertListEqual>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.assertLogs>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.assertMultiLineEqual>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.assertNotAlmostEqual>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.assertNotEqual>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.assertNotIn>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.assertNotIsInstance>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.assertNotRegex>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.assertRaises>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.assertRaisesRegex>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.assertRegex>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.assertSequenceEqual>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.assertSetEqual>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.assertTrue>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.assertTupleEqual>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.assertWarns>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.assertWarnsRegex>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.countTestCases>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.debug>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.defaultTestResult>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <bound method TestCase.doClassCleanups of <class 'tests.test_cli_commands.transplant_class.<locals>.C'>>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.doCleanups>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.fail>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.id>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.run>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.setUp>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <bound method TestCase.setUpClass of <class 'tests.test_cli_commands.transplant_class.<locals>.C'>>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.shortDescription>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.skipTest>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.subTest>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.tearDown>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <bound method TestCase.tearDownClass of <class 'tests.test_cli_commands.transplant_class.<locals>.C'>>? None
+[tests : nosetests] nose.suite: DEBUG: Create suite for <map object at 0x7f2dd2da67f0>
+[tests : nosetests] nose.suite: DEBUG: tests <map object at 0x7f2dd2da67f0> context None
+[tests : nosetests] nose.suite: DEBUG: wrap <map object at 0x7f2dd2da67f0>
+[tests : nosetests] nose.suite: DEBUG: Context suite for [] (None) (139834787784736)
+[tests : nosetests] nose.selector: DEBUG: wantMethod <bound method TestCase.addClassCleanup of <class 'tests.test_cli_commands.TestFlaskCLI'>>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestFlaskCLI.addCleanup>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestFlaskCLI.addTypeEqualityFunc>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestFlaskCLI.assertAlmostEqual>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestFlaskCLI.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestFlaskCLI.assertCountEqual>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestFlaskCLI.assertDictContainsSubset>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestFlaskCLI.assertDictEqual>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestFlaskCLI.assertEqual>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestFlaskCLI.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestFlaskCLI.assertFalse>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestFlaskCLI.assertGreater>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestFlaskCLI.assertGreaterEqual>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestFlaskCLI.assertIn>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestFlaskCLI.assertIs>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestFlaskCLI.assertIsInstance>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestFlaskCLI.assertIsNone>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestFlaskCLI.assertIsNot>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestFlaskCLI.assertIsNotNone>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestFlaskCLI.assertLess>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestFlaskCLI.assertLessEqual>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestFlaskCLI.assertListEqual>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestFlaskCLI.assertLogs>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestFlaskCLI.assertMultiLineEqual>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestFlaskCLI.assertNotAlmostEqual>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestFlaskCLI.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestFlaskCLI.assertNotEqual>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestFlaskCLI.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestFlaskCLI.assertNotIn>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestFlaskCLI.assertNotIsInstance>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestFlaskCLI.assertNotRegex>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestFlaskCLI.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestFlaskCLI.assertRaises>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestFlaskCLI.assertRaisesRegex>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestFlaskCLI.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestFlaskCLI.assertRegex>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestFlaskCLI.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestFlaskCLI.assertSequenceEqual>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestFlaskCLI.assertSetEqual>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestFlaskCLI.assertTrue>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestFlaskCLI.assertTupleEqual>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestFlaskCLI.assertWarns>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestFlaskCLI.assertWarnsRegex>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestFlaskCLI.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestFlaskCLI.countTestCases>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestFlaskCLI.debug>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestFlaskCLI.defaultTestResult>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <bound method TestCase.doClassCleanups of <class 'tests.test_cli_commands.TestFlaskCLI'>>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestFlaskCLI.doCleanups>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestFlaskCLI.fail>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestFlaskCLI.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestFlaskCLI.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestFlaskCLI.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestFlaskCLI.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestFlaskCLI.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestFlaskCLI.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestFlaskCLI.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestFlaskCLI.id>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestFlaskCLI.run>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestFlaskCLI.setUp>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <bound method TestCase.setUpClass of <class 'tests.test_cli_commands.TestFlaskCLI'>>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestFlaskCLI.shortDescription>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestFlaskCLI.skipTest>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestFlaskCLI.subTest>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestFlaskCLI.tearDown>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <bound method TestCase.tearDownClass of <class 'tests.test_cli_commands.TestFlaskCLI'>>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestFlaskCLI.test_db_create>? True
+[tests : nosetests] nose.suite: DEBUG: Create suite for <map object at 0x7f2dd2da6850>
+[tests : nosetests] nose.suite: DEBUG: tests <map object at 0x7f2dd2da6850> context None
+[tests : nosetests] nose.suite: DEBUG: wrap <map object at 0x7f2dd2da6850>
+[tests : nosetests] nose.suite: DEBUG: wrapping test_db_create (tests.test_cli_commands.TestFlaskCLI)
+[tests : nosetests] nose.suite: DEBUG: Context suite for [Test(<tests.test_cli_commands.TestFlaskCLI testMethod=test_db_create>)] (<class 'tests.test_cli_commands.TestFlaskCLI'>) (139834787784160)
+[tests : nosetests] nose.suite: DEBUG: suite <nose.suite.ContextSuite context=TestFlaskCLI> has context TestFlaskCLI
+[tests : nosetests] nose.suite: DEBUG: get ancestry <class 'tests.test_cli_commands.TestFlaskCLI'>
+[tests : nosetests] nose.suite: DEBUG:  <class 'tests.test_cli_commands.TestFlaskCLI'> ancestors ['tests', 'test_cli_commands']
+[tests : nosetests] nose: DEBUG: __import__ tests.test_cli_commands
+[tests : nosetests] nose: DEBUG: resolve: ['test_cli_commands'], tests.test_cli_commands, <module 'tests' from '/workspace/source/tests/__init__.py'>, <module 'tests' from '/workspace/source/tests/__init__.py'>
+[tests : nosetests] nose.suite: DEBUG: suite <nose.suite.ContextSuite context=TestFlaskCLI> has ancestor tests.test_cli_commands
+[tests : nosetests] nose.suite: DEBUG:  <class 'tests.test_cli_commands.TestFlaskCLI'> ancestors ['tests']
+[tests : nosetests] nose: DEBUG: __import__ tests
+[tests : nosetests] nose: DEBUG: resolve: [], tests, <module 'tests' from '/workspace/source/tests/__init__.py'>, <module 'tests' from '/workspace/source/tests/__init__.py'>
+[tests : nosetests] nose.suite: DEBUG: suite <nose.suite.ContextSuite context=TestFlaskCLI> has ancestor tests
+[tests : nosetests] nose.suite: DEBUG: Create suite for <nose.suite.ContextList object at 0x7f2dd2dd8c40>
+[tests : nosetests] nose.suite: DEBUG: tests <nose.suite.ContextList object at 0x7f2dd2dd8c40> context <module 'tests.test_cli_commands' from '/workspace/source/tests/test_cli_commands.py'>
+[tests : nosetests] nose.suite: DEBUG: Context suite for <nose.suite.ContextList object at 0x7f2dd2dd8c40> (<module 'tests.test_cli_commands' from '/workspace/source/tests/test_cli_commands.py'>) (139834787785120)
+[tests : nosetests] nose.suite: DEBUG: suite <nose.suite.ContextSuite context=tests.test_cli_commands> has context tests.test_cli_commands
+[tests : nosetests] nose.suite: DEBUG: get ancestry <module 'tests.test_cli_commands' from '/workspace/source/tests/test_cli_commands.py'>
+[tests : nosetests] nose.suite: DEBUG:  <module 'tests.test_cli_commands' from '/workspace/source/tests/test_cli_commands.py'> ancestors ['tests']
+[tests : nosetests] nose: DEBUG: __import__ tests
+[tests : nosetests] nose: DEBUG: resolve: [], tests, <module 'tests' from '/workspace/source/tests/__init__.py'>, <module 'tests' from '/workspace/source/tests/__init__.py'>
+[tests : nosetests] nose.suite: DEBUG: suite <nose.suite.ContextSuite context=tests.test_cli_commands> has ancestor tests
+[tests : nosetests] nose.selector: DEBUG: wantFile /workspace/source/tests/test_error_handlers.py? True
+[tests : nosetests] nose.loader: DEBUG: load from /workspace/source/tests/test_error_handlers.py (None)
+[tests : nosetests] nose.selector: DEBUG: Test name /workspace/source/tests/test_error_handlers.py resolved to file /workspace/source/tests/test_error_handlers.py, module None, call None
+[tests : nosetests] nose.selector: DEBUG: Final resolution of test name /workspace/source/tests/test_error_handlers.py: file /workspace/source/tests/test_error_handlers.py module tests.test_error_handlers call None
+[tests : nosetests] nose.importer: DEBUG: Import tests.test_error_handlers from /workspace/source
+[tests : nosetests] nose.importer: DEBUG: Add path /workspace/source
+[tests : nosetests] nose.importer: DEBUG: find module part tests (tests) in ['/workspace/source']
+[tests : nosetests] nose.importer: DEBUG: sys.modules has tests as <module 'tests' from '/workspace/source/tests/__init__.py'>
+[tests : nosetests] nose.importer: DEBUG: module already loaded? mod: /workspace/source/tests new: /workspace/source/tests
+[tests : nosetests] nose.importer: DEBUG: find module part test_error_handlers (tests.test_error_handlers) in ['/workspace/source/tests']
+[tests : nosetests] nose.loader: DEBUG: Load from module <module 'tests.test_error_handlers' from '/workspace/source/tests/test_error_handlers.py'>
+[tests : nosetests] nose.selector: DEBUG: wantModule <module 'tests.test_error_handlers' from '/workspace/source/tests/test_error_handlers.py'>? True
+[tests : nosetests] nose.selector: DEBUG: wantClass <class 'service.models.DataValidationError'>? None
+[tests : nosetests] nose.selector: DEBUG: wantClass <class 'flask.app.Flask'>? None
+[tests : nosetests] nose.selector: DEBUG: wantClass <class 'tests.test_error_handlers.TestErrorHandlers'>? True
+[tests : nosetests] nose.selector: DEBUG: wantFunction <function jsonify at 0x7f2dd449a790>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <bound method TestCase.addClassCleanup of <class 'tests.test_error_handlers.TestErrorHandlers'>>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestErrorHandlers.addCleanup>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestErrorHandlers.addTypeEqualityFunc>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestErrorHandlers.assertAlmostEqual>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestErrorHandlers.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestErrorHandlers.assertCountEqual>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestErrorHandlers.assertDictContainsSubset>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestErrorHandlers.assertDictEqual>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestErrorHandlers.assertEqual>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestErrorHandlers.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestErrorHandlers.assertFalse>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestErrorHandlers.assertGreater>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestErrorHandlers.assertGreaterEqual>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestErrorHandlers.assertIn>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestErrorHandlers.assertIs>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestErrorHandlers.assertIsInstance>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestErrorHandlers.assertIsNone>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestErrorHandlers.assertIsNot>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestErrorHandlers.assertIsNotNone>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestErrorHandlers.assertLess>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestErrorHandlers.assertLessEqual>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestErrorHandlers.assertListEqual>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestErrorHandlers.assertLogs>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestErrorHandlers.assertMultiLineEqual>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestErrorHandlers.assertNotAlmostEqual>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestErrorHandlers.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestErrorHandlers.assertNotEqual>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestErrorHandlers.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestErrorHandlers.assertNotIn>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestErrorHandlers.assertNotIsInstance>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestErrorHandlers.assertNotRegex>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestErrorHandlers.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestErrorHandlers.assertRaises>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestErrorHandlers.assertRaisesRegex>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestErrorHandlers.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestErrorHandlers.assertRegex>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestErrorHandlers.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestErrorHandlers.assertSequenceEqual>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestErrorHandlers.assertSetEqual>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestErrorHandlers.assertTrue>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestErrorHandlers.assertTupleEqual>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestErrorHandlers.assertWarns>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestErrorHandlers.assertWarnsRegex>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestErrorHandlers.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestErrorHandlers.countTestCases>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestErrorHandlers.debug>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestErrorHandlers.defaultTestResult>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <bound method TestCase.doClassCleanups of <class 'tests.test_error_handlers.TestErrorHandlers'>>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestErrorHandlers.doCleanups>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestErrorHandlers.fail>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestErrorHandlers.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestErrorHandlers.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestErrorHandlers.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestErrorHandlers.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestErrorHandlers.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestErrorHandlers.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestErrorHandlers.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestErrorHandlers.id>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestErrorHandlers.run>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestErrorHandlers.setUp>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <bound method TestErrorHandlers.setUpClass of <class 'tests.test_error_handlers.TestErrorHandlers'>>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestErrorHandlers.shortDescription>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestErrorHandlers.skipTest>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestErrorHandlers.subTest>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestErrorHandlers.tearDown>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <bound method TestErrorHandlers.tearDownClass of <class 'tests.test_error_handlers.TestErrorHandlers'>>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestErrorHandlers.test_400_bad_request>? True
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestErrorHandlers.test_404_not_found>? True
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestErrorHandlers.test_405_method_not_allowed>? True
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestErrorHandlers.test_415_unsupported_media_type>? True
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestErrorHandlers.test_500_internal_server_error>? True
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestErrorHandlers.test_data_validation_error>? True
+[tests : nosetests] nose.suite: DEBUG: Create suite for <map object at 0x7f2dd2d9aa90>
+[tests : nosetests] nose.suite: DEBUG: tests <map object at 0x7f2dd2d9aa90> context None
+[tests : nosetests] nose.suite: DEBUG: wrap <map object at 0x7f2dd2d9aa90>
+[tests : nosetests] nose.suite: DEBUG: wrapping test_400_bad_request (tests.test_error_handlers.TestErrorHandlers)
+[tests : nosetests] nose.suite: DEBUG: wrapping test_404_not_found (tests.test_error_handlers.TestErrorHandlers)
+[tests : nosetests] nose.suite: DEBUG: wrapping test_405_method_not_allowed (tests.test_error_handlers.TestErrorHandlers)
+[tests : nosetests] nose.suite: DEBUG: wrapping test_415_unsupported_media_type (tests.test_error_handlers.TestErrorHandlers)
+[tests : nosetests] nose.suite: DEBUG: wrapping test_500_internal_server_error (tests.test_error_handlers.TestErrorHandlers)
+[tests : nosetests] nose.suite: DEBUG: wrapping test_data_validation_error (tests.test_error_handlers.TestErrorHandlers)
+[tests : nosetests] nose.suite: DEBUG: Context suite for [Test(<tests.test_error_handlers.TestErrorHandlers testMethod=test_400_bad_request>), Test(<tests.test_error_handlers.TestErrorHandlers testMethod=test_404_not_found>), Test(<tests.test_error_handlers.TestErrorHandlers testMethod=test_405_method_not_allowed>), Test(<tests.test_error_handlers.TestErrorHandlers testMethod=test_415_unsupported_media_type>), Test(<tests.test_error_handlers.TestErrorHandlers testMethod=test_500_internal_server_error>), Test(<tests.test_error_handlers.TestErrorHandlers testMethod=test_data_validation_error>)] (<class 'tests.test_error_handlers.TestErrorHandlers'>) (139834787736064)
+[tests : nosetests] nose.suite: DEBUG: suite <nose.suite.ContextSuite context=TestErrorHandlers> has context TestErrorHandlers
+[tests : nosetests] nose.suite: DEBUG: get ancestry <class 'tests.test_error_handlers.TestErrorHandlers'>
+[tests : nosetests] nose.suite: DEBUG:  <class 'tests.test_error_handlers.TestErrorHandlers'> ancestors ['tests', 'test_error_handlers']
+[tests : nosetests] nose: DEBUG: __import__ tests.test_error_handlers
+[tests : nosetests] nose: DEBUG: resolve: ['test_error_handlers'], tests.test_error_handlers, <module 'tests' from '/workspace/source/tests/__init__.py'>, <module 'tests' from '/workspace/source/tests/__init__.py'>
+[tests : nosetests] nose.suite: DEBUG: suite <nose.suite.ContextSuite context=TestErrorHandlers> has ancestor tests.test_error_handlers
+[tests : nosetests] nose.suite: DEBUG:  <class 'tests.test_error_handlers.TestErrorHandlers'> ancestors ['tests']
+[tests : nosetests] nose: DEBUG: __import__ tests
+[tests : nosetests] nose: DEBUG: resolve: [], tests, <module 'tests' from '/workspace/source/tests/__init__.py'>, <module 'tests' from '/workspace/source/tests/__init__.py'>
+[tests : nosetests] nose.suite: DEBUG: suite <nose.suite.ContextSuite context=TestErrorHandlers> has ancestor tests
+[tests : nosetests] nose.suite: DEBUG: Create suite for <nose.suite.ContextList object at 0x7f2dd2d9aac0>
+[tests : nosetests] nose.suite: DEBUG: tests <nose.suite.ContextList object at 0x7f2dd2d9aac0> context <module 'tests.test_error_handlers' from '/workspace/source/tests/test_error_handlers.py'>
+[tests : nosetests] nose.suite: DEBUG: Context suite for <nose.suite.ContextList object at 0x7f2dd2d9aac0> (<module 'tests.test_error_handlers' from '/workspace/source/tests/test_error_handlers.py'>) (139834787736016)
+[tests : nosetests] nose.suite: DEBUG: suite <nose.suite.ContextSuite context=tests.test_error_handlers> has context tests.test_error_handlers
+[tests : nosetests] nose.suite: DEBUG: get ancestry <module 'tests.test_error_handlers' from '/workspace/source/tests/test_error_handlers.py'>
+[tests : nosetests] nose.suite: DEBUG:  <module 'tests.test_error_handlers' from '/workspace/source/tests/test_error_handlers.py'> ancestors ['tests']
+[tests : nosetests] nose: DEBUG: __import__ tests
+[tests : nosetests] nose: DEBUG: resolve: [], tests, <module 'tests' from '/workspace/source/tests/__init__.py'>, <module 'tests' from '/workspace/source/tests/__init__.py'>
+[tests : nosetests] nose.suite: DEBUG: suite <nose.suite.ContextSuite context=tests.test_error_handlers> has ancestor tests
+[tests : nosetests] nose.selector: DEBUG: wantFile /workspace/source/tests/test_models.py? True
+[tests : nosetests] nose.loader: DEBUG: load from /workspace/source/tests/test_models.py (None)
+[tests : nosetests] nose.selector: DEBUG: Test name /workspace/source/tests/test_models.py resolved to file /workspace/source/tests/test_models.py, module None, call None
+[tests : nosetests] nose.selector: DEBUG: Final resolution of test name /workspace/source/tests/test_models.py: file /workspace/source/tests/test_models.py module tests.test_models call None
+[tests : nosetests] nose.importer: DEBUG: Import tests.test_models from /workspace/source
+[tests : nosetests] nose.importer: DEBUG: Add path /workspace/source
+[tests : nosetests] nose.importer: DEBUG: find module part tests (tests) in ['/workspace/source']
+[tests : nosetests] nose.importer: DEBUG: sys.modules has tests as <module 'tests' from '/workspace/source/tests/__init__.py'>
+[tests : nosetests] nose.importer: DEBUG: module already loaded? mod: /workspace/source/tests new: /workspace/source/tests
+[tests : nosetests] nose.importer: DEBUG: find module part test_models (tests.test_models) in ['/workspace/source/tests']
+[tests : nosetests] nose.loader: DEBUG: Load from module <module 'tests.test_models' from '/workspace/source/tests/test_models.py'>
+[tests : nosetests] nose.selector: DEBUG: wantModule <module 'tests.test_models' from '/workspace/source/tests/test_models.py'>? True
+[tests : nosetests] nose.selector: DEBUG: wantClass <class 'service.models.Account'>? None
+[tests : nosetests] nose.selector: DEBUG: wantClass <AccountFactory for <class 'service.models.Account'>>? None
+[tests : nosetests] nose.selector: DEBUG: wantClass <class 'service.models.DataValidationError'>? None
+[tests : nosetests] nose.selector: DEBUG: wantClass <class 'tests.test_models.TestAccount'>? True
+[tests : nosetests] nose.selector: DEBUG: wantClass <class 'datetime.date'>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <bound method TestCase.addClassCleanup of <class 'tests.test_models.TestAccount'>>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccount.addCleanup>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccount.addTypeEqualityFunc>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccount.assertAlmostEqual>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccount.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccount.assertCountEqual>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccount.assertDictContainsSubset>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccount.assertDictEqual>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccount.assertEqual>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccount.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccount.assertFalse>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccount.assertGreater>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccount.assertGreaterEqual>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccount.assertIn>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccount.assertIs>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccount.assertIsInstance>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccount.assertIsNone>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccount.assertIsNot>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccount.assertIsNotNone>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccount.assertLess>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccount.assertLessEqual>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccount.assertListEqual>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccount.assertLogs>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccount.assertMultiLineEqual>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccount.assertNotAlmostEqual>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccount.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccount.assertNotEqual>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccount.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccount.assertNotIn>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccount.assertNotIsInstance>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccount.assertNotRegex>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccount.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccount.assertRaises>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccount.assertRaisesRegex>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccount.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccount.assertRegex>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccount.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccount.assertSequenceEqual>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccount.assertSetEqual>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccount.assertTrue>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccount.assertTupleEqual>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccount.assertWarns>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccount.assertWarnsRegex>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccount.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccount.countTestCases>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccount.debug>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccount.defaultTestResult>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <bound method TestCase.doClassCleanups of <class 'tests.test_models.TestAccount'>>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccount.doCleanups>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccount.fail>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccount.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccount.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccount.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccount.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccount.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccount.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccount.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccount.id>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccount.run>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccount.setUp>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <bound method TestAccount.setUpClass of <class 'tests.test_models.TestAccount'>>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccount.shortDescription>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccount.skipTest>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccount.subTest>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccount.tearDown>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <bound method TestAccount.tearDownClass of <class 'tests.test_models.TestAccount'>>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccount.test_add_a_account>? True
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccount.test_create_an_account>? True
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccount.test_delete_an_account>? True
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccount.test_deserialize_an_account>? True
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccount.test_deserialize_with_key_error>? True
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccount.test_deserialize_with_type_error>? True
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccount.test_deserialize_without_date_joined>? True
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccount.test_find_by_name>? True
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccount.test_list_all_accounts>? True
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccount.test_read_account>? True
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccount.test_repr_account>? True
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccount.test_serialize_an_account>? True
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccount.test_update_account>? True
+[tests : nosetests] nose.suite: DEBUG: Create suite for <map object at 0x7f2dd2c98fa0>
+[tests : nosetests] nose.suite: DEBUG: tests <map object at 0x7f2dd2c98fa0> context None
+[tests : nosetests] nose.suite: DEBUG: wrap <map object at 0x7f2dd2c98fa0>
+[tests : nosetests] nose.suite: DEBUG: wrapping test_add_a_account (tests.test_models.TestAccount)
+[tests : nosetests] nose.suite: DEBUG: wrapping test_create_an_account (tests.test_models.TestAccount)
+[tests : nosetests] nose.suite: DEBUG: wrapping test_delete_an_account (tests.test_models.TestAccount)
+[tests : nosetests] nose.suite: DEBUG: wrapping test_deserialize_an_account (tests.test_models.TestAccount)
+[tests : nosetests] nose.suite: DEBUG: wrapping test_deserialize_with_key_error (tests.test_models.TestAccount)
+[tests : nosetests] nose.suite: DEBUG: wrapping test_deserialize_with_type_error (tests.test_models.TestAccount)
+[tests : nosetests] nose.suite: DEBUG: wrapping test_deserialize_without_date_joined (tests.test_models.TestAccount)
+[tests : nosetests] nose.suite: DEBUG: wrapping test_find_by_name (tests.test_models.TestAccount)
+[tests : nosetests] nose.suite: DEBUG: wrapping test_list_all_accounts (tests.test_models.TestAccount)
+[tests : nosetests] nose.suite: DEBUG: wrapping test_read_account (tests.test_models.TestAccount)
+[tests : nosetests] nose.suite: DEBUG: wrapping test_repr_account (tests.test_models.TestAccount)
+[tests : nosetests] nose.suite: DEBUG: wrapping test_serialize_an_account (tests.test_models.TestAccount)
+[tests : nosetests] nose.suite: DEBUG: wrapping test_update_account (tests.test_models.TestAccount)
+[tests : nosetests] nose.suite: DEBUG: Context suite for [Test(<tests.test_models.TestAccount testMethod=test_add_a_account>), Test(<tests.test_models.TestAccount testMethod=test_create_an_account>), Test(<tests.test_models.TestAccount testMethod=test_delete_an_account>), Test(<tests.test_models.TestAccount testMethod=test_deserialize_an_account>), Test(<tests.test_models.TestAccount testMethod=test_deserialize_with_key_error>), Test(<tests.test_models.TestAccount testMethod=test_deserialize_with_type_error>), Test(<tests.test_models.TestAccount testMethod=test_deserialize_without_date_joined>), Test(<tests.test_models.TestAccount testMethod=test_find_by_name>), Test(<tests.test_models.TestAccount testMethod=test_list_all_accounts>), Test(<tests.test_models.TestAccount testMethod=test_read_account>), Test(<tests.test_models.TestAccount testMethod=test_repr_account>), Test(<tests.test_models.TestAccount testMethod=test_serialize_an_account>), Test(<tests.test_models.TestAccount testMethod=test_update_account>)] (<class 'tests.test_models.TestAccount'>) (139834809747776)
+[tests : nosetests] nose.suite: DEBUG: suite <nose.suite.ContextSuite context=TestAccount> has context TestAccount
+[tests : nosetests] nose.suite: DEBUG: get ancestry <class 'tests.test_models.TestAccount'>
+[tests : nosetests] nose.suite: DEBUG:  <class 'tests.test_models.TestAccount'> ancestors ['tests', 'test_models']
+[tests : nosetests] nose: DEBUG: __import__ tests.test_models
+[tests : nosetests] nose: DEBUG: resolve: ['test_models'], tests.test_models, <module 'tests' from '/workspace/source/tests/__init__.py'>, <module 'tests' from '/workspace/source/tests/__init__.py'>
+[tests : nosetests] nose.suite: DEBUG: suite <nose.suite.ContextSuite context=TestAccount> has ancestor tests.test_models
+[tests : nosetests] nose.suite: DEBUG:  <class 'tests.test_models.TestAccount'> ancestors ['tests']
+[tests : nosetests] nose: DEBUG: __import__ tests
+[tests : nosetests] nose: DEBUG: resolve: [], tests, <module 'tests' from '/workspace/source/tests/__init__.py'>, <module 'tests' from '/workspace/source/tests/__init__.py'>
+[tests : nosetests] nose.suite: DEBUG: suite <nose.suite.ContextSuite context=TestAccount> has ancestor tests
+[tests : nosetests] nose.suite: DEBUG: Create suite for <nose.suite.ContextList object at 0x7f2dd2c98fd0>
+[tests : nosetests] nose.suite: DEBUG: tests <nose.suite.ContextList object at 0x7f2dd2c98fd0> context <module 'tests.test_models' from '/workspace/source/tests/test_models.py'>
+[tests : nosetests] nose.suite: DEBUG: Context suite for <nose.suite.ContextList object at 0x7f2dd2c98fd0> (<module 'tests.test_models' from '/workspace/source/tests/test_models.py'>) (139834787735680)
+[tests : nosetests] nose.suite: DEBUG: suite <nose.suite.ContextSuite context=tests.test_models> has context tests.test_models
+[tests : nosetests] nose.suite: DEBUG: get ancestry <module 'tests.test_models' from '/workspace/source/tests/test_models.py'>
+[tests : nosetests] nose.suite: DEBUG:  <module 'tests.test_models' from '/workspace/source/tests/test_models.py'> ancestors ['tests']
+[tests : nosetests] nose: DEBUG: __import__ tests
+[tests : nosetests] nose: DEBUG: resolve: [], tests, <module 'tests' from '/workspace/source/tests/__init__.py'>, <module 'tests' from '/workspace/source/tests/__init__.py'>
+[tests : nosetests] nose.suite: DEBUG: suite <nose.suite.ContextSuite context=tests.test_models> has ancestor tests
+[tests : nosetests] nose.selector: DEBUG: wantFile /workspace/source/tests/test_routes.py? True
+[tests : nosetests] nose.loader: DEBUG: load from /workspace/source/tests/test_routes.py (None)
+[tests : nosetests] nose.selector: DEBUG: Test name /workspace/source/tests/test_routes.py resolved to file /workspace/source/tests/test_routes.py, module None, call None
+[tests : nosetests] nose.selector: DEBUG: Final resolution of test name /workspace/source/tests/test_routes.py: file /workspace/source/tests/test_routes.py module tests.test_routes call None
+[tests : nosetests] nose.importer: DEBUG: Import tests.test_routes from /workspace/source
+[tests : nosetests] nose.importer: DEBUG: Add path /workspace/source
+[tests : nosetests] nose.importer: DEBUG: find module part tests (tests) in ['/workspace/source']
+[tests : nosetests] nose.importer: DEBUG: sys.modules has tests as <module 'tests' from '/workspace/source/tests/__init__.py'>
+[tests : nosetests] nose.importer: DEBUG: module already loaded? mod: /workspace/source/tests new: /workspace/source/tests
+[tests : nosetests] nose.importer: DEBUG: find module part test_routes (tests.test_routes) in ['/workspace/source/tests']
+[tests : nosetests] nose.loader: DEBUG: Load from module <module 'tests.test_routes' from '/workspace/source/tests/test_routes.py'>
+[tests : nosetests] nose.selector: DEBUG: wantModule <module 'tests.test_routes' from '/workspace/source/tests/test_routes.py'>? True
+[tests : nosetests] nose.selector: DEBUG: wantClass <class 'service.models.Account'>? None
+[tests : nosetests] nose.selector: DEBUG: wantClass <AccountFactory for <class 'service.models.Account'>>? None
+[tests : nosetests] nose.selector: DEBUG: wantClass <class 'tests.test_routes.TestAccountService'>? True
+[tests : nosetests] nose.selector: DEBUG: wantClass <class 'unittest.case.TestCase'>? True
+[tests : nosetests] nose.selector: DEBUG: wantFunction <function init_db at 0x7f2dd2e56ee0>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <bound method TestCase.addClassCleanup of <class 'tests.test_routes.TestAccountService'>>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccountService.addCleanup>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccountService.addTypeEqualityFunc>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccountService.assertAlmostEqual>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccountService.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccountService.assertCountEqual>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccountService.assertDictContainsSubset>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccountService.assertDictEqual>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccountService.assertEqual>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccountService.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccountService.assertFalse>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccountService.assertGreater>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccountService.assertGreaterEqual>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccountService.assertIn>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccountService.assertIs>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccountService.assertIsInstance>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccountService.assertIsNone>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccountService.assertIsNot>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccountService.assertIsNotNone>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccountService.assertLess>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccountService.assertLessEqual>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccountService.assertListEqual>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccountService.assertLogs>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccountService.assertMultiLineEqual>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccountService.assertNotAlmostEqual>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccountService.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccountService.assertNotEqual>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccountService.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccountService.assertNotIn>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccountService.assertNotIsInstance>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccountService.assertNotRegex>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccountService.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccountService.assertRaises>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccountService.assertRaisesRegex>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccountService.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccountService.assertRegex>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccountService.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccountService.assertSequenceEqual>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccountService.assertSetEqual>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccountService.assertTrue>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccountService.assertTupleEqual>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccountService.assertWarns>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccountService.assertWarnsRegex>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccountService.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccountService.countTestCases>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccountService.debug>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccountService.defaultTestResult>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <bound method TestCase.doClassCleanups of <class 'tests.test_routes.TestAccountService'>>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccountService.doCleanups>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccountService.fail>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccountService.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccountService.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccountService.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccountService.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccountService.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccountService.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccountService.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccountService.id>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccountService.run>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccountService.setUp>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <bound method TestAccountService.setUpClass of <class 'tests.test_routes.TestAccountService'>>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccountService.shortDescription>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccountService.skipTest>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccountService.subTest>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccountService.tearDown>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <bound method TestAccountService.tearDownClass of <class 'tests.test_routes.TestAccountService'>>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccountService.test_bad_request>? True
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccountService.test_cors_security>? True
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccountService.test_create_account>? True
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccountService.test_delete_account>? True
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccountService.test_delete_account_not_found>? True
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccountService.test_get_account>? True
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccountService.test_get_account_not_found>? True
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccountService.test_health>? True
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccountService.test_index>? True
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccountService.test_list_accounts>? True
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccountService.test_security_headers>? True
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccountService.test_unsupported_media_type>? True
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccountService.test_update_account>? True
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestAccountService.test_update_account_not_found>? True
+[tests : nosetests] nose.suite: DEBUG: Create suite for <map object at 0x7f2dd42c4160>
+[tests : nosetests] nose.suite: DEBUG: tests <map object at 0x7f2dd42c4160> context None
+[tests : nosetests] nose.suite: DEBUG: wrap <map object at 0x7f2dd42c4160>
+[tests : nosetests] nose.suite: DEBUG: wrapping test_bad_request (tests.test_routes.TestAccountService)
+[tests : nosetests] nose.suite: DEBUG: wrapping test_cors_security (tests.test_routes.TestAccountService)
+[tests : nosetests] nose.suite: DEBUG: wrapping test_create_account (tests.test_routes.TestAccountService)
+[tests : nosetests] nose.suite: DEBUG: wrapping test_delete_account (tests.test_routes.TestAccountService)
+[tests : nosetests] nose.suite: DEBUG: wrapping test_delete_account_not_found (tests.test_routes.TestAccountService)
+[tests : nosetests] nose.suite: DEBUG: wrapping test_get_account (tests.test_routes.TestAccountService)
+[tests : nosetests] nose.suite: DEBUG: wrapping test_get_account_not_found (tests.test_routes.TestAccountService)
+[tests : nosetests] nose.suite: DEBUG: wrapping test_health (tests.test_routes.TestAccountService)
+[tests : nosetests] nose.suite: DEBUG: wrapping test_index (tests.test_routes.TestAccountService)
+[tests : nosetests] nose.suite: DEBUG: wrapping test_list_accounts (tests.test_routes.TestAccountService)
+[tests : nosetests] nose.suite: DEBUG: wrapping test_security_headers (tests.test_routes.TestAccountService)
+[tests : nosetests] nose.suite: DEBUG: wrapping test_unsupported_media_type (tests.test_routes.TestAccountService)
+[tests : nosetests] nose.suite: DEBUG: wrapping test_update_account (tests.test_routes.TestAccountService)
+[tests : nosetests] nose.suite: DEBUG: wrapping test_update_account_not_found (tests.test_routes.TestAccountService)
+[tests : nosetests] nose.suite: DEBUG: Context suite for [Test(<tests.test_routes.TestAccountService testMethod=test_bad_request>), Test(<tests.test_routes.TestAccountService testMethod=test_cors_security>), Test(<tests.test_routes.TestAccountService testMethod=test_create_account>), Test(<tests.test_routes.TestAccountService testMethod=test_delete_account>), Test(<tests.test_routes.TestAccountService testMethod=test_delete_account_not_found>), Test(<tests.test_routes.TestAccountService testMethod=test_get_account>), Test(<tests.test_routes.TestAccountService testMethod=test_get_account_not_found>), Test(<tests.test_routes.TestAccountService testMethod=test_health>), Test(<tests.test_routes.TestAccountService testMethod=test_index>), Test(<tests.test_routes.TestAccountService testMethod=test_list_accounts>), Test(<tests.test_routes.TestAccountService testMethod=test_security_headers>), Test(<tests.test_routes.TestAccountService testMethod=test_unsupported_media_type>), Test(<tests.test_routes.TestAccountService testMethod=test_update_account>), Test(<tests.test_routes.TestAccountService testMethod=test_update_account_not_found>)] (<class 'tests.test_routes.TestAccountService'>) (139834809925888)
+[tests : nosetests] nose.suite: DEBUG: suite <nose.suite.ContextSuite context=TestAccountService> has context TestAccountService
+[tests : nosetests] nose.suite: DEBUG: get ancestry <class 'tests.test_routes.TestAccountService'>
+[tests : nosetests] nose.suite: DEBUG:  <class 'tests.test_routes.TestAccountService'> ancestors ['tests', 'test_routes']
+[tests : nosetests] nose: DEBUG: __import__ tests.test_routes
+[tests : nosetests] nose: DEBUG: resolve: ['test_routes'], tests.test_routes, <module 'tests' from '/workspace/source/tests/__init__.py'>, <module 'tests' from '/workspace/source/tests/__init__.py'>
+[tests : nosetests] nose.suite: DEBUG: suite <nose.suite.ContextSuite context=TestAccountService> has ancestor tests.test_routes
+[tests : nosetests] nose.suite: DEBUG:  <class 'tests.test_routes.TestAccountService'> ancestors ['tests']
+[tests : nosetests] nose: DEBUG: __import__ tests
+[tests : nosetests] nose: DEBUG: resolve: [], tests, <module 'tests' from '/workspace/source/tests/__init__.py'>, <module 'tests' from '/workspace/source/tests/__init__.py'>
+[tests : nosetests] nose.suite: DEBUG: suite <nose.suite.ContextSuite context=TestAccountService> has ancestor tests
+[tests : nosetests] nose.selector: DEBUG: wantMethod <bound method TestCase.addClassCleanup of <class 'tests.test_routes.transplant_class.<locals>.C'>>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.addCleanup>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.addTypeEqualityFunc>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.assertAlmostEqual>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.assertCountEqual>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.assertDictContainsSubset>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.assertDictEqual>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.assertEqual>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.assertFalse>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.assertGreater>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.assertGreaterEqual>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.assertIn>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.assertIs>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.assertIsInstance>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.assertIsNone>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.assertIsNot>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.assertIsNotNone>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.assertLess>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.assertLessEqual>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.assertListEqual>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.assertLogs>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.assertMultiLineEqual>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.assertNotAlmostEqual>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.assertNotEqual>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.assertNotIn>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.assertNotIsInstance>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.assertNotRegex>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.assertRaises>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.assertRaisesRegex>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.assertRegex>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.assertSequenceEqual>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.assertSetEqual>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.assertTrue>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.assertTupleEqual>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.assertWarns>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.assertWarnsRegex>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.countTestCases>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.debug>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.defaultTestResult>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <bound method TestCase.doClassCleanups of <class 'tests.test_routes.transplant_class.<locals>.C'>>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.doCleanups>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.fail>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.deprecated_func>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.id>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.run>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.setUp>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <bound method TestCase.setUpClass of <class 'tests.test_routes.transplant_class.<locals>.C'>>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.shortDescription>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.skipTest>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.subTest>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <unbound method TestCase.tearDown>? None
+[tests : nosetests] nose.selector: DEBUG: wantMethod <bound method TestCase.tearDownClass of <class 'tests.test_routes.transplant_class.<locals>.C'>>? None
+[tests : nosetests] nose.suite: DEBUG: Create suite for <map object at 0x7f2dd42c4eb0>
+[tests : nosetests] nose.suite: DEBUG: tests <map object at 0x7f2dd42c4eb0> context None
+[tests : nosetests] nose.suite: DEBUG: wrap <map object at 0x7f2dd42c4eb0>
+[tests : nosetests] nose.suite: DEBUG: Context suite for [] (None) (139834809925840)
+[tests : nosetests] nose.suite: DEBUG: Create suite for <nose.suite.ContextList object at 0x7f2dd42c4160>
+[tests : nosetests] nose.suite: DEBUG: tests <nose.suite.ContextList object at 0x7f2dd42c4160> context <module 'tests.test_routes' from '/workspace/source/tests/test_routes.py'>
+[tests : nosetests] nose.suite: DEBUG: Context suite for <nose.suite.ContextList object at 0x7f2dd42c4160> (<module 'tests.test_routes' from '/workspace/source/tests/test_routes.py'>) (139834809925792)
+[tests : nosetests] nose.suite: DEBUG: suite <nose.suite.ContextSuite context=tests.test_routes> has context tests.test_routes
+[tests : nosetests] nose.suite: DEBUG: get ancestry <module 'tests.test_routes' from '/workspace/source/tests/test_routes.py'>
+[tests : nosetests] nose.suite: DEBUG:  <module 'tests.test_routes' from '/workspace/source/tests/test_routes.py'> ancestors ['tests']
+[tests : nosetests] nose: DEBUG: __import__ tests
+[tests : nosetests] nose: DEBUG: resolve: [], tests, <module 'tests' from '/workspace/source/tests/__init__.py'>, <module 'tests' from '/workspace/source/tests/__init__.py'>
+[tests : nosetests] nose.suite: DEBUG: suite <nose.suite.ContextSuite context=tests.test_routes> has ancestor tests
+[tests : nosetests] nose.suite: DEBUG: Create suite for <nose.suite.ContextList object at 0x7f2dd2d9a8e0>
+[tests : nosetests] nose.suite: DEBUG: tests <nose.suite.ContextList object at 0x7f2dd2d9a8e0> context <module 'tests' from '/workspace/source/tests/__init__.py'>
+[tests : nosetests] nose.suite: DEBUG: Context suite for <nose.suite.ContextList object at 0x7f2dd2d9a8e0> (<module 'tests' from '/workspace/source/tests/__init__.py'>) (139834787988912)
+[tests : nosetests] nose.suite: DEBUG: suite <nose.suite.ContextSuite context=tests> has context tests
+[tests : nosetests] nose.suite: DEBUG: get ancestry <module 'tests' from '/workspace/source/tests/__init__.py'>
+[tests : nosetests] nose.suite: DEBUG: suite 139834787988912 (<nose.suite.ContextSuite context=tests>) run called, tests: <generator object ContextSuite._get_wrapped_tests at 0x7f2dd2dd1ac0>
+[tests : nosetests] nose.suite: DEBUG: suite 139834787988912 setUp called, tests: <generator object ContextSuite._get_wrapped_tests at 0x7f2dd2dd1ac0>
+[tests : nosetests] nose.suite: DEBUG: tests in 139834787988912?
+[tests : nosetests] nose.suite: DEBUG: ancestor <module 'tests' from '/workspace/source/tests/__init__.py'> may need setup
+[tests : nosetests] nose.suite: DEBUG: ancestor <module 'tests' from '/workspace/source/tests/__init__.py'> does need setup
+[tests : nosetests] nose.suite: DEBUG: <nose.suite.ContextSuite context=tests> setup context <module 'tests' from '/workspace/source/tests/__init__.py'>
+[tests : nosetests] nose.suite: DEBUG: completed suite setup
+[tests : nosetests] nose.suite: DEBUG: precache is [<nose.suite.ContextSuite context=tests.test_cli_commands>, <nose.suite.ContextSuite context=tests.test_error_handlers>, <nose.suite.ContextSuite context=tests.test_models>, <nose.suite.ContextSuite context=tests.test_routes>]
+[tests : nosetests] nose.suite: DEBUG: suite 139834787785120 (<nose.suite.ContextSuite context=tests.test_cli_commands>) run called, tests: <generator object ContextSuite._get_wrapped_tests at 0x7f2dd4312900>
+[tests : nosetests] nose.suite: DEBUG: suite 139834787785120 setUp called, tests: <generator object ContextSuite._get_wrapped_tests at 0x7f2dd4312900>
+[tests : nosetests] nose.suite: DEBUG: tests in 139834787785120?
+[tests : nosetests] nose.suite: DEBUG: ancestor <module 'tests' from '/workspace/source/tests/__init__.py'> may need setup
+[tests : nosetests] nose.suite: DEBUG: ancestor <module 'tests.test_cli_commands' from '/workspace/source/tests/test_cli_commands.py'> may need setup
+[tests : nosetests] nose.suite: DEBUG: ancestor <module 'tests.test_cli_commands' from '/workspace/source/tests/test_cli_commands.py'> does need setup
+[tests : nosetests] nose.suite: DEBUG: <nose.suite.ContextSuite context=tests.test_cli_commands> setup context <module 'tests.test_cli_commands' from '/workspace/source/tests/test_cli_commands.py'>
+[tests : nosetests] nose.suite: DEBUG: completed suite setup
+[tests : nosetests] nose.suite: DEBUG: precache is [<nose.suite.ContextSuite context=None>, <nose.suite.ContextSuite context=TestFlaskCLI>]
+[tests : nosetests] nose.suite: DEBUG: suite 139834787784736 (<nose.suite.ContextSuite context=None>) run called, tests: <generator object ContextSuite._get_wrapped_tests at 0x7f2dd4312f90>
+[tests : nosetests] nose.suite: DEBUG: suite 139834787784736 setUp called, tests: <generator object ContextSuite._get_wrapped_tests at 0x7f2dd4312f90>
+[tests : nosetests] nose.suite: DEBUG: tests in 139834787784736?
+[tests : nosetests] nose.suite: DEBUG: suite 139834787784736 has no tests
+[tests : nosetests] nose.suite: DEBUG: precache is []
+[tests : nosetests] nose.suite: DEBUG: context teardown
+[tests : nosetests] nose.suite: DEBUG: No reason to teardown (was_setup? False was_torndown? False)
+[tests : nosetests] nose.suite: DEBUG: suite 139834787784160 (<nose.suite.ContextSuite context=TestFlaskCLI>) run called, tests: <generator object ContextSuite._get_wrapped_tests at 0x7f2dd4312f90>
+[tests : nosetests] nose.suite: DEBUG: suite 139834787784160 setUp called, tests: <generator object ContextSuite._get_wrapped_tests at 0x7f2dd4312f90>
+[tests : nosetests] nose.suite: DEBUG: tests in 139834787784160?
+[tests : nosetests] nose.suite: DEBUG: ancestor <module 'tests' from '/workspace/source/tests/__init__.py'> may need setup
+[tests : nosetests] nose.suite: DEBUG: ancestor <module 'tests.test_cli_commands' from '/workspace/source/tests/test_cli_commands.py'> may need setup
+[tests : nosetests] nose.suite: DEBUG: ancestor <class 'tests.test_cli_commands.TestFlaskCLI'> may need setup
+[tests : nosetests] nose.suite: DEBUG: ancestor <class 'tests.test_cli_commands.TestFlaskCLI'> does need setup
+[tests : nosetests] nose.suite: DEBUG: <nose.suite.ContextSuite context=TestFlaskCLI> setup context <class 'tests.test_cli_commands.TestFlaskCLI'>
+[tests : nosetests] nose: DEBUG: call fixture <class 'tests.test_cli_commands.TestFlaskCLI'>.setUpClass
+[tests : nosetests] nose.suite: DEBUG: completed suite setup
+[tests : nosetests] nose.suite: DEBUG: precache is [Test(<tests.test_cli_commands.TestFlaskCLI testMethod=test_db_create>)]
+[tests : nosetests] 
+[tests : nosetests] Test Flask CLI Commands
+[tests : nosetests] [1;32m- It should call the db-create command[1;0m
+[tests : nosetests] nose.suite: DEBUG: context teardown
+[tests : nosetests] nose.suite: DEBUG: ancestor <class 'tests.test_cli_commands.TestFlaskCLI'> may need teardown
+[tests : nosetests] nose.suite: DEBUG: <nose.suite.ContextSuite context=TestFlaskCLI> setup ancestor <class 'tests.test_cli_commands.TestFlaskCLI'>
+[tests : nosetests] nose.suite: DEBUG: <nose.suite.ContextSuite context=TestFlaskCLI> teardown context <class 'tests.test_cli_commands.TestFlaskCLI'>
+[tests : nosetests] nose: DEBUG: call fixture <class 'tests.test_cli_commands.TestFlaskCLI'>.tearDownClass
+[tests : nosetests] nose.suite: DEBUG: ancestor <module 'tests.test_cli_commands' from '/workspace/source/tests/test_cli_commands.py'> may need teardown
+[tests : nosetests] nose.suite: DEBUG: <nose.suite.ContextSuite context=tests.test_cli_commands> setup ancestor <module 'tests.test_cli_commands' from '/workspace/source/tests/test_cli_commands.py'>
+[tests : nosetests] nose.suite: DEBUG: ancestor <module 'tests' from '/workspace/source/tests/__init__.py'> may need teardown
+[tests : nosetests] nose.suite: DEBUG: <nose.suite.ContextSuite context=tests> setup ancestor <module 'tests' from '/workspace/source/tests/__init__.py'>
+[tests : nosetests] nose.suite: DEBUG: ancestor <class 'tests.test_cli_commands.TestFlaskCLI'> may need teardown
+[tests : nosetests] nose.suite: DEBUG: ancestor <class 'tests.test_cli_commands.TestFlaskCLI'> already torn down
+[tests : nosetests] nose.suite: DEBUG: context teardown
+[tests : nosetests] nose.suite: DEBUG: ancestor <module 'tests.test_cli_commands' from '/workspace/source/tests/test_cli_commands.py'> may need teardown
+[tests : nosetests] nose.suite: DEBUG: <nose.suite.ContextSuite context=tests.test_cli_commands> setup ancestor <module 'tests.test_cli_commands' from '/workspace/source/tests/test_cli_commands.py'>
+[tests : nosetests] nose.suite: DEBUG: <nose.suite.ContextSuite context=tests.test_cli_commands> teardown context <module 'tests.test_cli_commands' from '/workspace/source/tests/test_cli_commands.py'>
+[tests : nosetests] nose.suite: DEBUG: ancestor <module 'tests' from '/workspace/source/tests/__init__.py'> may need teardown
+[tests : nosetests] nose.suite: DEBUG: <nose.suite.ContextSuite context=tests> setup ancestor <module 'tests' from '/workspace/source/tests/__init__.py'>
+[tests : nosetests] nose.suite: DEBUG: ancestor <module 'tests.test_cli_commands' from '/workspace/source/tests/test_cli_commands.py'> may need teardown
+[tests : nosetests] nose.suite: DEBUG: ancestor <module 'tests.test_cli_commands' from '/workspace/source/tests/test_cli_commands.py'> already torn down
+[tests : nosetests] nose.suite: DEBUG: suite 139834787736016 (<nose.suite.ContextSuite context=tests.test_error_handlers>) run called, tests: <generator object ContextSuite._get_wrapped_tests at 0x7f2dd4312900>
+[tests : nosetests] nose.suite: DEBUG: suite 139834787736016 setUp called, tests: <generator object ContextSuite._get_wrapped_tests at 0x7f2dd4312900>
+[tests : nosetests] nose.suite: DEBUG: tests in 139834787736016?
+[tests : nosetests] nose.suite: DEBUG: ancestor <module 'tests' from '/workspace/source/tests/__init__.py'> may need setup
+[tests : nosetests] nose.suite: DEBUG: ancestor <module 'tests.test_error_handlers' from '/workspace/source/tests/test_error_handlers.py'> may need setup
+[tests : nosetests] nose.suite: DEBUG: ancestor <module 'tests.test_error_handlers' from '/workspace/source/tests/test_error_handlers.py'> does need setup
+[tests : nosetests] nose.suite: DEBUG: <nose.suite.ContextSuite context=tests.test_error_handlers> setup context <module 'tests.test_error_handlers' from '/workspace/source/tests/test_error_handlers.py'>
+[tests : nosetests] nose.suite: DEBUG: completed suite setup
+[tests : nosetests] nose.suite: DEBUG: precache is [<nose.suite.ContextSuite context=TestErrorHandlers>]
+[tests : nosetests] nose.suite: DEBUG: suite 139834787736064 (<nose.suite.ContextSuite context=TestErrorHandlers>) run called, tests: <generator object ContextSuite._get_wrapped_tests at 0x7f2dd4312f90>
+[tests : nosetests] nose.suite: DEBUG: suite 139834787736064 setUp called, tests: <generator object ContextSuite._get_wrapped_tests at 0x7f2dd4312f90>
+[tests : nosetests] nose.suite: DEBUG: tests in 139834787736064?
+[tests : nosetests] nose.suite: DEBUG: ancestor <module 'tests' from '/workspace/source/tests/__init__.py'> may need setup
+[tests : nosetests] nose.suite: DEBUG: ancestor <module 'tests.test_error_handlers' from '/workspace/source/tests/test_error_handlers.py'> may need setup
+[tests : nosetests] nose.suite: DEBUG: ancestor <class 'tests.test_error_handlers.TestErrorHandlers'> may need setup
+[tests : nosetests] nose.suite: DEBUG: ancestor <class 'tests.test_error_handlers.TestErrorHandlers'> does need setup
+[tests : nosetests] nose.suite: DEBUG: <nose.suite.ContextSuite context=TestErrorHandlers> setup context <class 'tests.test_error_handlers.TestErrorHandlers'>
+[tests : nosetests] nose: DEBUG: call fixture <class 'tests.test_error_handlers.TestErrorHandlers'>.setUpClass
+[tests : nosetests] nose.suite: DEBUG: completed suite setup
+[tests : nosetests] nose.suite: DEBUG: precache is [Test(<tests.test_error_handlers.TestErrorHandlers testMethod=test_400_bad_request>), Test(<tests.test_error_handlers.TestErrorHandlers testMethod=test_404_not_found>), Test(<tests.test_error_handlers.TestErrorHandlers testMethod=test_405_method_not_allowed>), Test(<tests.test_error_handlers.TestErrorHandlers testMethod=test_415_unsupported_media_type>), Test(<tests.test_error_handlers.TestErrorHandlers testMethod=test_500_internal_server_error>), Test(<tests.test_error_handlers.TestErrorHandlers testMethod=test_data_validation_error>)]
+[tests : nosetests] 
+[tests : nosetests] Unit tests for Flask error handlers
+[tests : nosetests] Bad request data
+[tests : nosetests] [1;32m- Test handler for 400 Bad Request[1;0m
+[tests : nosetests] Resource missing
+[tests : nosetests] [1;32m- Test handler for 404 Not Found[1;0m
+[tests : nosetests] Method not supported
+[tests : nosetests] [1;32m- Test handler for 405 Method Not Allowed[1;0m
+[tests : nosetests] Wrong media type
+[tests : nosetests] [1;32m- Test handler for 415 Unsupported Media Type[1;0m
+[tests : nosetests] Something went wrong!
+[tests : nosetests] [1;32m- Test handler for 500 Internal Server Error[1;0m
+[tests : nosetests] Invalid data!
+[tests : nosetests] [1;32m- Test handler for DataValidationError[1;0m
+[tests : nosetests] nose.suite: DEBUG: context teardown
+[tests : nosetests] nose.suite: DEBUG: ancestor <class 'tests.test_error_handlers.TestErrorHandlers'> may need teardown
+[tests : nosetests] nose.suite: DEBUG: <nose.suite.ContextSuite context=TestErrorHandlers> setup ancestor <class 'tests.test_error_handlers.TestErrorHandlers'>
+[tests : nosetests] nose.suite: DEBUG: <nose.suite.ContextSuite context=TestErrorHandlers> teardown context <class 'tests.test_error_handlers.TestErrorHandlers'>
+[tests : nosetests] nose: DEBUG: call fixture <class 'tests.test_error_handlers.TestErrorHandlers'>.tearDownClass
+[tests : nosetests] nose.suite: DEBUG: ancestor <module 'tests.test_error_handlers' from '/workspace/source/tests/test_error_handlers.py'> may need teardown
+[tests : nosetests] nose.suite: DEBUG: <nose.suite.ContextSuite context=tests.test_error_handlers> setup ancestor <module 'tests.test_error_handlers' from '/workspace/source/tests/test_error_handlers.py'>
+[tests : nosetests] nose.suite: DEBUG: ancestor <module 'tests' from '/workspace/source/tests/__init__.py'> may need teardown
+[tests : nosetests] nose.suite: DEBUG: <nose.suite.ContextSuite context=tests> setup ancestor <module 'tests' from '/workspace/source/tests/__init__.py'>
+[tests : nosetests] nose.suite: DEBUG: ancestor <class 'tests.test_error_handlers.TestErrorHandlers'> may need teardown
+[tests : nosetests] nose.suite: DEBUG: ancestor <class 'tests.test_error_handlers.TestErrorHandlers'> already torn down
+[tests : nosetests] nose.suite: DEBUG: context teardown
+[tests : nosetests] nose.suite: DEBUG: ancestor <module 'tests.test_error_handlers' from '/workspace/source/tests/test_error_handlers.py'> may need teardown
+[tests : nosetests] nose.suite: DEBUG: <nose.suite.ContextSuite context=tests.test_error_handlers> setup ancestor <module 'tests.test_error_handlers' from '/workspace/source/tests/test_error_handlers.py'>
+[tests : nosetests] nose.suite: DEBUG: <nose.suite.ContextSuite context=tests.test_error_handlers> teardown context <module 'tests.test_error_handlers' from '/workspace/source/tests/test_error_handlers.py'>
+[tests : nosetests] nose.suite: DEBUG: ancestor <module 'tests' from '/workspace/source/tests/__init__.py'> may need teardown
+[tests : nosetests] nose.suite: DEBUG: <nose.suite.ContextSuite context=tests> setup ancestor <module 'tests' from '/workspace/source/tests/__init__.py'>
+[tests : nosetests] nose.suite: DEBUG: ancestor <module 'tests.test_error_handlers' from '/workspace/source/tests/test_error_handlers.py'> may need teardown
+[tests : nosetests] nose.suite: DEBUG: ancestor <module 'tests.test_error_handlers' from '/workspace/source/tests/test_error_handlers.py'> already torn down
+[tests : nosetests] nose.suite: DEBUG: suite 139834787735680 (<nose.suite.ContextSuite context=tests.test_models>) run called, tests: <generator object ContextSuite._get_wrapped_tests at 0x7f2dd4312900>
+[tests : nosetests] nose.suite: DEBUG: suite 139834787735680 setUp called, tests: <generator object ContextSuite._get_wrapped_tests at 0x7f2dd4312900>
+[tests : nosetests] nose.suite: DEBUG: tests in 139834787735680?
+[tests : nosetests] nose.suite: DEBUG: ancestor <module 'tests' from '/workspace/source/tests/__init__.py'> may need setup
+[tests : nosetests] nose.suite: DEBUG: ancestor <module 'tests.test_models' from '/workspace/source/tests/test_models.py'> may need setup
+[tests : nosetests] nose.suite: DEBUG: ancestor <module 'tests.test_models' from '/workspace/source/tests/test_models.py'> does need setup
+[tests : nosetests] nose.suite: DEBUG: <nose.suite.ContextSuite context=tests.test_models> setup context <module 'tests.test_models' from '/workspace/source/tests/test_models.py'>
+[tests : nosetests] nose.suite: DEBUG: completed suite setup
+[tests : nosetests] nose.suite: DEBUG: precache is [<nose.suite.ContextSuite context=TestAccount>]
+[tests : nosetests] nose.suite: DEBUG: suite 139834809747776 (<nose.suite.ContextSuite context=TestAccount>) run called, tests: <generator object ContextSuite._get_wrapped_tests at 0x7f2dd4312ba0>
+[tests : nosetests] nose.suite: DEBUG: suite 139834809747776 setUp called, tests: <generator object ContextSuite._get_wrapped_tests at 0x7f2dd4312ba0>
+[tests : nosetests] nose.suite: DEBUG: tests in 139834809747776?
+[tests : nosetests] nose.suite: DEBUG: ancestor <module 'tests' from '/workspace/source/tests/__init__.py'> may need setup
+[tests : nosetests] nose.suite: DEBUG: ancestor <module 'tests.test_models' from '/workspace/source/tests/test_models.py'> may need setup
+[tests : nosetests] nose.suite: DEBUG: ancestor <class 'tests.test_models.TestAccount'> may need setup
+[tests : nosetests] nose.suite: DEBUG: ancestor <class 'tests.test_models.TestAccount'> does need setup
+[tests : nosetests] nose.suite: DEBUG: <nose.suite.ContextSuite context=TestAccount> setup context <class 'tests.test_models.TestAccount'>
+[tests : nosetests] nose: DEBUG: call fixture <class 'tests.test_models.TestAccount'>.setUpClass
+[tests : nosetests] nose.suite: DEBUG: completed suite setup
+[tests : nosetests] nose.suite: DEBUG: precache is [Test(<tests.test_models.TestAccount testMethod=test_add_a_account>), Test(<tests.test_models.TestAccount testMethod=test_create_an_account>), Test(<tests.test_models.TestAccount testMethod=test_delete_an_account>), Test(<tests.test_models.TestAccount testMethod=test_deserialize_an_account>), Test(<tests.test_models.TestAccount testMethod=test_deserialize_with_key_error>), Test(<tests.test_models.TestAccount testMethod=test_deserialize_with_type_error>), Test(<tests.test_models.TestAccount testMethod=test_deserialize_without_date_joined>), Test(<tests.test_models.TestAccount testMethod=test_find_by_name>), Test(<tests.test_models.TestAccount testMethod=test_list_all_accounts>), Test(<tests.test_models.TestAccount testMethod=test_read_account>), Test(<tests.test_models.TestAccount testMethod=test_repr_account>), Test(<tests.test_models.TestAccount testMethod=test_serialize_an_account>), Test(<tests.test_models.TestAccount testMethod=test_update_account>)]
+[tests : nosetests] 
+[tests : nosetests] Test Cases for Account Model
+[tests : nosetests] [1;32m- It should Create an account and add it to the database[1;0m
+[tests : nosetests] [1;32m- It should Create an Account and assert that it exists[1;0m
+[tests : nosetests] [1;32m- It should Delete an account from the database[1;0m
+[tests : nosetests] [1;32m- It should Deserialize an account[1;0m
+[tests : nosetests] [1;32m- It should not Deserialize an account with a KeyError[1;0m
+[tests : nosetests] [1;32m- It should not Deserialize an account with a TypeError[1;0m
+[tests : nosetests] [1;32m- It should set date_joined to today if not provided[1;0m
+[tests : nosetests] [1;32m- It should Find an Account by name[1;0m
+[tests : nosetests] [1;32m- It should List all Accounts in the database[1;0m
+[tests : nosetests] [1;32m- It should Read an account[1;0m
+[tests : nosetests] [1;32m- It should cover __repr__ for Account[1;0m
+[tests : nosetests] [1;32m- It should Serialize an account[1;0m
+[tests : nosetests] [1;32m- It should Update an account[1;0m
+[tests : nosetests] nose.suite: DEBUG: context teardown
+[tests : nosetests] nose.suite: DEBUG: ancestor <class 'tests.test_models.TestAccount'> may need teardown
+[tests : nosetests] nose.suite: DEBUG: <nose.suite.ContextSuite context=TestAccount> setup ancestor <class 'tests.test_models.TestAccount'>
+[tests : nosetests] nose.suite: DEBUG: <nose.suite.ContextSuite context=TestAccount> teardown context <class 'tests.test_models.TestAccount'>
+[tests : nosetests] nose: DEBUG: call fixture <class 'tests.test_models.TestAccount'>.tearDownClass
+[tests : nosetests] nose.suite: DEBUG: ancestor <module 'tests.test_models' from '/workspace/source/tests/test_models.py'> may need teardown
+[tests : nosetests] nose.suite: DEBUG: <nose.suite.ContextSuite context=tests.test_models> setup ancestor <module 'tests.test_models' from '/workspace/source/tests/test_models.py'>
+[tests : nosetests] nose.suite: DEBUG: ancestor <module 'tests' from '/workspace/source/tests/__init__.py'> may need teardown
+[tests : nosetests] nose.suite: DEBUG: <nose.suite.ContextSuite context=tests> setup ancestor <module 'tests' from '/workspace/source/tests/__init__.py'>
+[tests : nosetests] nose.suite: DEBUG: ancestor <class 'tests.test_models.TestAccount'> may need teardown
+[tests : nosetests] nose.suite: DEBUG: ancestor <class 'tests.test_models.TestAccount'> already torn down
+[tests : nosetests] nose.suite: DEBUG: context teardown
+[tests : nosetests] nose.suite: DEBUG: ancestor <module 'tests.test_models' from '/workspace/source/tests/test_models.py'> may need teardown
+[tests : nosetests] nose.suite: DEBUG: <nose.suite.ContextSuite context=tests.test_models> setup ancestor <module 'tests.test_models' from '/workspace/source/tests/test_models.py'>
+[tests : nosetests] nose.suite: DEBUG: <nose.suite.ContextSuite context=tests.test_models> teardown context <module 'tests.test_models' from '/workspace/source/tests/test_models.py'>
+[tests : nosetests] nose.suite: DEBUG: ancestor <module 'tests' from '/workspace/source/tests/__init__.py'> may need teardown
+[tests : nosetests] nose.suite: DEBUG: <nose.suite.ContextSuite context=tests> setup ancestor <module 'tests' from '/workspace/source/tests/__init__.py'>
+[tests : nosetests] nose.suite: DEBUG: ancestor <module 'tests.test_models' from '/workspace/source/tests/test_models.py'> may need teardown
+[tests : nosetests] nose.suite: DEBUG: ancestor <module 'tests.test_models' from '/workspace/source/tests/test_models.py'> already torn down
+[tests : nosetests] nose.suite: DEBUG: suite 139834809925792 (<nose.suite.ContextSuite context=tests.test_routes>) run called, tests: <generator object ContextSuite._get_wrapped_tests at 0x7f2dd4312900>
+[tests : nosetests] nose.suite: DEBUG: suite 139834809925792 setUp called, tests: <generator object ContextSuite._get_wrapped_tests at 0x7f2dd4312900>
+[tests : nosetests] nose.suite: DEBUG: tests in 139834809925792?
+[tests : nosetests] nose.suite: DEBUG: ancestor <module 'tests' from '/workspace/source/tests/__init__.py'> may need setup
+[tests : nosetests] nose.suite: DEBUG: ancestor <module 'tests.test_routes' from '/workspace/source/tests/test_routes.py'> may need setup
+[tests : nosetests] nose.suite: DEBUG: ancestor <module 'tests.test_routes' from '/workspace/source/tests/test_routes.py'> does need setup
+[tests : nosetests] nose.suite: DEBUG: <nose.suite.ContextSuite context=tests.test_routes> setup context <module 'tests.test_routes' from '/workspace/source/tests/test_routes.py'>
+[tests : nosetests] nose.suite: DEBUG: completed suite setup
+[tests : nosetests] nose.suite: DEBUG: precache is [<nose.suite.ContextSuite context=TestAccountService>, <nose.suite.ContextSuite context=None>]
+[tests : nosetests] nose.suite: DEBUG: suite 139834809925888 (<nose.suite.ContextSuite context=TestAccountService>) run called, tests: <generator object ContextSuite._get_wrapped_tests at 0x7f2dd42c1c10>
+[tests : nosetests] nose.suite: DEBUG: suite 139834809925888 setUp called, tests: <generator object ContextSuite._get_wrapped_tests at 0x7f2dd42c1c10>
+[tests : nosetests] nose.suite: DEBUG: tests in 139834809925888?
+[tests : nosetests] nose.suite: DEBUG: ancestor <module 'tests' from '/workspace/source/tests/__init__.py'> may need setup
+[tests : nosetests] nose.suite: DEBUG: ancestor <module 'tests.test_routes' from '/workspace/source/tests/test_routes.py'> may need setup
+[tests : nosetests] nose.suite: DEBUG: ancestor <class 'tests.test_routes.TestAccountService'> may need setup
+[tests : nosetests] nose.suite: DEBUG: ancestor <class 'tests.test_routes.TestAccountService'> does need setup
+[tests : nosetests] nose.suite: DEBUG: <nose.suite.ContextSuite context=TestAccountService> setup context <class 'tests.test_routes.TestAccountService'>
+[tests : nosetests] nose: DEBUG: call fixture <class 'tests.test_routes.TestAccountService'>.setUpClass
+[tests : nosetests] nose.suite: DEBUG: completed suite setup
+[tests : nosetests] nose.suite: DEBUG: precache is [Test(<tests.test_routes.TestAccountService testMethod=test_bad_request>), Test(<tests.test_routes.TestAccountService testMethod=test_cors_security>), Test(<tests.test_routes.TestAccountService testMethod=test_create_account>), Test(<tests.test_routes.TestAccountService testMethod=test_delete_account>), Test(<tests.test_routes.TestAccountService testMethod=test_delete_account_not_found>), Test(<tests.test_routes.TestAccountService testMethod=test_get_account>), Test(<tests.test_routes.TestAccountService testMethod=test_get_account_not_found>), Test(<tests.test_routes.TestAccountService testMethod=test_health>), Test(<tests.test_routes.TestAccountService testMethod=test_index>), Test(<tests.test_routes.TestAccountService testMethod=test_list_accounts>), Test(<tests.test_routes.TestAccountService testMethod=test_security_headers>), Test(<tests.test_routes.TestAccountService testMethod=test_unsupported_media_type>), Test(<tests.test_routes.TestAccountService testMethod=test_update_account>), Test(<tests.test_routes.TestAccountService testMethod=test_update_account_not_found>)]
+[tests : nosetests] 
+[tests : nosetests] Account Service Tests
+[tests : nosetests] [1;32m- It should not Create an Account when sending the wrong data[1;0m
+[tests : nosetests] [1;32m- It should return a CORS header[1;0m
+[tests : nosetests] [1;32m- It should Create a new Account[1;0m
+[tests : nosetests] [1;32m- It should Delete an existing Account[1;0m
+[tests : nosetests] [1;32m- It should return 404 when deleting non-existent Account[1;0m
+[tests : nosetests] [1;32m- It should Get a single Account by id[1;0m
+[tests : nosetests] [1;32m- It should return 404 if Account does not exist[1;0m
+[tests : nosetests] [1;32m- It should be healthy[1;0m
+[tests : nosetests] [1;32m- It should get 200_OK from the Home Page[1;0m
+[tests : nosetests] [1;32m- It should List all Accounts[1;0m
+[tests : nosetests] [1;32m- It should return security headers[1;0m
+[tests : nosetests] [1;32m- It should not Create an Account when sending the wrong media type[1;0m
+[tests : nosetests] [1;32m- It should Update an existing Account[1;0m
+[tests : nosetests] [1;32m- It should return 404 when updating non-existent Account[1;0m
+[tests : nosetests] nose.suite: DEBUG: context teardown
+[tests : nosetests] nose.suite: DEBUG: ancestor <class 'tests.test_routes.TestAccountService'> may need teardown
+[tests : nosetests] nose.suite: DEBUG: <nose.suite.ContextSuite context=TestAccountService> setup ancestor <class 'tests.test_routes.TestAccountService'>
+[tests : nosetests] nose.suite: DEBUG: <nose.suite.ContextSuite context=TestAccountService> teardown context <class 'tests.test_routes.TestAccountService'>
+[tests : nosetests] nose: DEBUG: call fixture <class 'tests.test_routes.TestAccountService'>.tearDownClass
+[tests : nosetests] nose.suite: DEBUG: ancestor <module 'tests.test_routes' from '/workspace/source/tests/test_routes.py'> may need teardown
+[tests : nosetests] nose.suite: DEBUG: <nose.suite.ContextSuite context=tests.test_routes> setup ancestor <module 'tests.test_routes' from '/workspace/source/tests/test_routes.py'>
+[tests : nosetests] nose.suite: DEBUG: ancestor <module 'tests' from '/workspace/source/tests/__init__.py'> may need teardown
+[tests : nosetests] nose.suite: DEBUG: <nose.suite.ContextSuite context=tests> setup ancestor <module 'tests' from '/workspace/source/tests/__init__.py'>
+[tests : nosetests] nose.suite: DEBUG: ancestor <class 'tests.test_routes.TestAccountService'> may need teardown
+[tests : nosetests] nose.suite: DEBUG: ancestor <class 'tests.test_routes.TestAccountService'> already torn down
+[tests : nosetests] nose.suite: DEBUG: suite 139834809925840 (<nose.suite.ContextSuite context=None>) run called, tests: <generator object ContextSuite._get_wrapped_tests at 0x7f2dd26df350>
+[tests : nosetests] nose.suite: DEBUG: suite 139834809925840 setUp called, tests: <generator object ContextSuite._get_wrapped_tests at 0x7f2dd26df350>
+[tests : nosetests] nose.suite: DEBUG: tests in 139834809925840?
+[tests : nosetests] nose.suite: DEBUG: suite 139834809925840 has no tests
+[tests : nosetests] nose.suite: DEBUG: precache is []
+[tests : nosetests] nose.suite: DEBUG: context teardown
+[tests : nosetests] nose.suite: DEBUG: No reason to teardown (was_setup? False was_torndown? False)
+[tests : nosetests] nose.suite: DEBUG: context teardown
+[tests : nosetests] nose.suite: DEBUG: ancestor <module 'tests.test_routes' from '/workspace/source/tests/test_routes.py'> may need teardown
+[tests : nosetests] nose.suite: DEBUG: <nose.suite.ContextSuite context=tests.test_routes> setup ancestor <module 'tests.test_routes' from '/workspace/source/tests/test_routes.py'>
+[tests : nosetests] nose.suite: DEBUG: <nose.suite.ContextSuite context=tests.test_routes> teardown context <module 'tests.test_routes' from '/workspace/source/tests/test_routes.py'>
+[tests : nosetests] nose.suite: DEBUG: ancestor <module 'tests' from '/workspace/source/tests/__init__.py'> may need teardown
+[tests : nosetests] nose.suite: DEBUG: <nose.suite.ContextSuite context=tests> setup ancestor <module 'tests' from '/workspace/source/tests/__init__.py'>
+[tests : nosetests] nose.suite: DEBUG: ancestor <module 'tests.test_routes' from '/workspace/source/tests/test_routes.py'> may need teardown
+[tests : nosetests] nose.suite: DEBUG: ancestor <module 'tests.test_routes' from '/workspace/source/tests/test_routes.py'> already torn down
+[tests : nosetests] nose.suite: DEBUG: context teardown
+[tests : nosetests] nose.suite: DEBUG: ancestor <module 'tests' from '/workspace/source/tests/__init__.py'> may need teardown
+[tests : nosetests] nose.suite: DEBUG: <nose.suite.ContextSuite context=tests> setup ancestor <module 'tests' from '/workspace/source/tests/__init__.py'>
+[tests : nosetests] nose.suite: DEBUG: <nose.suite.ContextSuite context=tests> teardown context <module 'tests' from '/workspace/source/tests/__init__.py'>
+[tests : nosetests] nose.suite: DEBUG: ancestor <module 'tests' from '/workspace/source/tests/__init__.py'> may need teardown
+[tests : nosetests] nose.suite: DEBUG: ancestor <module 'tests' from '/workspace/source/tests/__init__.py'> already torn down
+[tests : nosetests] nose.suite: DEBUG: context teardown
+[tests : nosetests] nose.suite: DEBUG: No reason to teardown (was_setup? False was_torndown? False)
+[tests : nosetests] nose.plugins.cover: DEBUG: Coverage report
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage of sys: no __file__
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage of builtins: no __file__
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for _frozen_importlib: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage of _imp: no __file__
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage of _thread: no __file__
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage of _warnings: no __file__
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage of _weakref: no __file__
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage of _io: no __file__
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage of marshal: no __file__
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage of posix: no __file__
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for _frozen_importlib_external: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage of time: no __file__
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage of zipimport: no __file__
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage of _codecs: no __file__
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for codecs: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for encodings.aliases: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for encodings: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for encodings.utf_8: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage of _signal: no __file__
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for encodings.latin_1: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage of _abc: no __file__
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for abc: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for io: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage of __main__: not a python file
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage of _stat: no __file__
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for stat: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for _collections_abc: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for genericpath: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for posixpath: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for os.path: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for os: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for _sitebuiltins: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage of _locale: no __file__
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for _bootlocale: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for site: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for types: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for enum: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage of _sre: no __file__
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for sre_constants: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for sre_parse: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for sre_compile: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage of _heapq: not a python file
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for heapq: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage of itertools: no __file__
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for keyword: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage of _operator: no __file__
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for operator: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for reprlib: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage of _collections: no __file__
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for collections: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage of _functools: no __file__
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for functools: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for copyreg: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for re: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for token: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for tokenize: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for linecache: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for traceback: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for warnings: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for _weakrefset: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for weakref: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for collections.abc: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage of _string: no __file__
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for string: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for threading: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage of atexit: no __file__
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for logging: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for unittest.util: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for unittest.result: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for difflib: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for pprint: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for contextlib: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for unittest.case: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for unittest.suite: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for fnmatch: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for unittest.loader: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for gettext: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for argparse: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for signal: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for unittest.signals: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for unittest.runner: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for unittest.main: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for unittest: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for textwrap: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for locale: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage of errno: no __file__
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for optparse: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for configparser: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage of _ast: no __file__
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for ast: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage of _opcode: not a python file
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for opcode: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for dis: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for importlib._bootstrap: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for importlib._bootstrap_external: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for importlib: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for importlib.machinery: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for inspect: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for nose.pyversion: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for nose.util: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for nose.plugins.base: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for nose.failure: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage of _struct: not a python file
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for struct: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for _compat_pickle: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage of _pickle: not a python file
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for pickle: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage of binascii: not a python file
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage of typing.io: no __file__
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage of typing.re: no __file__
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for typing: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for importlib.abc: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for importlib.util: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage of zlib: not a python file
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for _compression: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage of _bz2: not a python file
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for bz2: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage of _lzma: not a python file
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for lzma: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage of pwd: no __file__
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage of grp: not a python file
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for shutil: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for zipfile: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for pkgutil: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage of _posixsubprocess: not a python file
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage of select: not a python file
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage of math: not a python file
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for selectors: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for subprocess: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for platform: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage of _datetime: not a python file
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for datetime: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for xml: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for xml.parsers: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage of pyexpat.errors: no __file__
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage of pyexpat.model: no __file__
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage of pyexpat: not a python file
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage of xml.parsers.expat.model: no __file__
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage of xml.parsers.expat.errors: no __file__
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for xml.parsers.expat: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for plistlib: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for email: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for email.errors: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for email.quoprimime: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for base64: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for email.base64mime: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for quopri: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for email.encoders: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for email.charset: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for email.header: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage of _bisect: not a python file
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for bisect: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage of _random: not a python file
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage of _sha512: not a python file
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for random: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage of _socket: not a python file
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage of array: not a python file
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for socket: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for urllib: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for urllib.parse: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for calendar: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for email._parseaddr: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for email.utils: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for email._policybase: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for email.feedparser: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for email.parser: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for tempfile: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for ntpath: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for pkg_resources.extern: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for pkg_resources._vendor: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for pkg_resources._vendor.appdirs: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for pkg_resources.extern.appdirs: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for __future__: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for pkg_resources._vendor.packaging.__about__: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for pkg_resources._vendor.packaging: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for pkg_resources.extern.packaging: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for pkg_resources.extern.packaging._structures: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for pkg_resources.extern.packaging._typing: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for pkg_resources.extern.packaging.version: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for pkg_resources.extern.packaging._compat: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for pkg_resources.extern.packaging.utils: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for pkg_resources.extern.packaging.specifiers: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for copy: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for pkg_resources._vendor.pyparsing: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for pkg_resources.extern.pyparsing: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for pkg_resources.extern.packaging.markers: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for pkg_resources.extern.packaging.requirements: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for sysconfig: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for pkg_resources: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for nose.plugins.manager: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for multiprocessing.process: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for multiprocessing.reduction: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for multiprocessing.context: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage of __mp_main__: not a python file
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for multiprocessing: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for nose.plugins.plugintest: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for nose.plugins: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for nose.config: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for nose.case: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for imp: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for nose.importer: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for nose.selector: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for nose.proxy: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for nose.suite: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for nose.loader: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for nose.result: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for nose.core: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for nose.plugins.errorclass: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for nose.plugins.skip: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for nose.plugins.deprecated: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for nose.exc: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for nose.tools.nontrivial: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for nose.tools.trivial: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for nose.tools: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for nose: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for uu: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for email._encoded_words: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for email.iterators: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for email.message: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for pinocchio: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for pinocchio.decorator: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for pinocchio.output_save: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for cmd: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for bdb: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for codeop: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for code: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for glob: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for pdb: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for doctest: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for colorama.ansi: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage of _ctypes: not a python file
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for ctypes._endian: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for ctypes: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for colorama.win32: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for colorama.winterm: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for colorama.ansitowin32: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for colorama.initialise: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for colorama: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for pinocchio.spec: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for pinocchio.stopwatch: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for pinocchio.figleaf_sections: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for nose.plugins.attrib: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for nose.plugins.capture: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for nose.plugins.logcapture: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for nose.plugins.cover: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for nose.plugins.debug: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for nose.plugins.doctests: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for nose.plugins.isolate: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for nose.inspector: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for nose.plugins.failuredetail: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for nose.plugins.prof: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for nose.plugins.testid: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage of _queue: not a python file
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for queue: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for nose.plugins.multiprocess: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for xml.sax.handler: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for xml.sax._exceptions: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for xml.sax.xmlreader: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for xml.sax: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage of _hashlib: not a python file
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage of _blake2: not a python file
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for hashlib: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for http: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage of _ssl: not a python file
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for ssl: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for http.client: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for urllib.response: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for urllib.error: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for urllib.request: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for xml.sax.saxutils: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for nose.plugins.xunit: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for nose.plugins.allmodules: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for nose.plugins.collect: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for nose.plugins.builtin: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for coverage.version: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for coverage.env: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for coverage.exceptions: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for coverage.misc: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for coverage.files: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for coverage.report: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for coverage.annotate: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for coverage.tomlconfig: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for coverage.config: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for coverage.debug: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for coverage.disposition: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for coverage.pytracer: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage of coverage.tracer: not a python file
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for coverage.collector: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for coverage.context: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage of _sqlite3: not a python file
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for sqlite3.dbapi2: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for sqlite3: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage of _json: not a python file
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for json.scanner: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for json.decoder: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for json.encoder: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for json: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for coverage.numbits: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for coverage.sqldata: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for coverage.data: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for coverage.results: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for coverage.templite: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for coverage.html: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for coverage.bytecode: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for coverage.phystokens: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for coverage.parser: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for coverage.plugin: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for coverage.python: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for coverage.inorout: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for coverage.jsonreport: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for coverage.lcovreport: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for coverage.plugin_support: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for coverage.summary: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for xml.dom.domreg: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for xml.dom: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for xml.dom.minicompat: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for xml.dom.NodeFilter: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for xml.dom.xmlbuilder: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for xml.dom.minidom: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for coverage.xmlreport: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for coverage.multiproc: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for coverage.control: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for coverage: loaded before coverage start
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage of $coverage.debug.DebugOutputFile.the_one: no __file__
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage of markupsafe._speedups: not a python file
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage of unicodedata: not a python file
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for werkzeug.test: is a test
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage of _decimal: not a python file
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage of _uuid: not a python file
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for jinja2.tests: is a test
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage of _contextvars: not a python file
+[tests : nosetests] nose.plugins.cover: DEBUG: coverage for service.config
+[tests : nosetests] nose.plugins.cover: DEBUG: coverage for service.common
+[tests : nosetests] nose.plugins.cover: DEBUG: coverage for service.common.log_handlers
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage of _csv: not a python file
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage of sqlalchemy.cimmutabledict: not a python file
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage of greenlet._greenlet: not a python file
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage of _asyncio: not a python file
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage of sqlalchemy.cprocessors: not a python file
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage of sqlalchemy.cresultproxy: not a python file
+[tests : nosetests] nose.plugins.cover: DEBUG: coverage for service.models
+[tests : nosetests] nose.plugins.cover: DEBUG: coverage for service.common.status
+[tests : nosetests] nose.plugins.cover: DEBUG: coverage for service.routes
+[tests : nosetests] nose.plugins.cover: DEBUG: coverage for service.common.error_handlers
+[tests : nosetests] nose.plugins.cover: DEBUG: coverage for service.common.cli_commands
+[tests : nosetests] nose.plugins.cover: DEBUG: coverage for service
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for tests: is a test
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for click.testing: is a test
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for tests.test_cli_commands: is a test
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for tests.test_error_handlers: is a test
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage of _zoneinfo: not a python file
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for tests.factories: is a test
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for tests.test_models: is a test
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for tests.test_routes: is a test
+[tests : nosetests] nose.plugins.cover: DEBUG: no coverage for flask.testing: is a test
+[tests : nosetests] nose.plugins.cover: DEBUG: Coverage report will cover modules: [<module 'service.config' from '/workspace/source/service/config.py'>, <module 'service.common' from '/workspace/source/service/common/__init__.py'>, <module 'service.common.log_handlers' from '/workspace/source/service/common/log_handlers.py'>, <module 'service.models' from '/workspace/source/service/models.py'>, <module 'service.common.status' from '/workspace/source/service/common/status.py'>, <module 'service.routes' from '/workspace/source/service/routes.py'>, <module 'service.common.error_handlers' from '/workspace/source/service/common/error_handlers.py'>, <module 'service.common.cli_commands' from '/workspace/source/service/common/cli_commands.py'>, <module 'service' from '/workspace/source/service/__init__.py'>]
+[tests : nosetests] 
+[tests : nosetests] Name                               Stmts   Miss  Cover   Missing
+[tests : nosetests] ----------------------------------------------------------------
+[tests : nosetests] service/__init__.py                   22      3    86%   36-39
+[tests : nosetests] service/common/__init__.py             0      0   100%
+[tests : nosetests] service/common/cli_commands.py         7      0   100%
+[tests : nosetests] service/common/error_handlers.py      32      0   100%
+[tests : nosetests] service/common/log_handlers.py        10      1    90%   21
+[tests : nosetests] service/common/status.py              46      0   100%
+[tests : nosetests] service/config.py                     11      5    55%   12-16
+[tests : nosetests] service/models.py                     69      1    99%   32
+[tests : nosetests] service/routes.py                     52      0   100%
+[tests : nosetests] ----------------------------------------------------------------
+[tests : nosetests] TOTAL                                249     10    96%
+[tests : nosetests] ----------------------------------------------------------------------
+[tests : nosetests] Ran 34 tests in 23.163s
+[tests : nosetests] 
+[tests : nosetests] OK
+[tests : nosetests] 
+

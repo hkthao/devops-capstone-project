@@ -136,7 +136,7 @@ class TestAccountService(TestCase):
         response = self.client.get(BASE_URL)
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         data = response.get_json()
-        self.assertEqual(len(data), 3)
+        self.assertEqual(len(data), len(accounts))
 
     def test_get_account(self):
         """It should Get a single Account by id"""
@@ -155,8 +155,12 @@ class TestAccountService(TestCase):
     def test_update_account(self):
         """It should Update an existing Account"""
         account = self._create_accounts(1)[0]
-        new_data = {"name": "Updated Name", "email": "updated@example.com", 
-                    "address": "Updated Address", "phone_number": "1234567890"}
+        new_data = {
+            "name": "Updated Name",
+            "email": "updated@example.com",
+            "address": "Updated Address",
+            "phone_number": "1234567890"
+        }
         response = self.client.put(f"{BASE_URL}/{account.id}", json=new_data)
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         data = response.get_json()
@@ -165,7 +169,11 @@ class TestAccountService(TestCase):
 
     def test_update_account_not_found(self):
         """It should return 404 when updating non-existent Account"""
-        new_data = {"name": "No One", "email": "noone@example.com", "address": "Nowhere"}
+        new_data = {
+            "name": "No One",
+            "email": "noone@example.com",
+            "address": "Nowhere"
+        }
         response = self.client.put(f"{BASE_URL}/9999", json=new_data)
         self.assertEqual(response.status_code, status.HTTP_404_NOT_FOUND)
 
@@ -190,7 +198,7 @@ class TestAccountService(TestCase):
         headers = {
             'X-Frame-Options': 'SAMEORIGIN',
             'X-Content-Type-Options': 'nosniff',
-            'Content-Security-Policy': 'default-src \'self\'; object-src \'none\'',
+            'Content-Security-Policy': "default-src 'self'; object-src 'none'",
             'Referrer-Policy': 'strict-origin-when-cross-origin'
         }
         for key, value in headers.items():
